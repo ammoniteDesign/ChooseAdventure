@@ -1,27 +1,15 @@
-# ScumQuarter
+# ChooseAdventure
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
+ I am creating a "Choose Your Own Adventure" engine which consumes a book in JSon form.
 
-## Development server
+## Features:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. **Cheating** Since what fun is a Choose Your Own Adventure book if you can't flip to a random page or choose a "path" that you don't have the correct inventory for?
+2. **Inventory and Gold** This makes the "paths" harder in that there are checks against inventory for some of them. You can lose and gain inventory and gold. There's even inventory that you can only get via certain choices.
+3. **Luck** Sometimes life doesn't go your way. This will be expressed via a digital six sided number generator. AKA a die.
+4. **Status Effects** Hey, when you're hurt you can't do stuff as well. This is a +/- modifier on your die rolls.
 
-## Code scaffolding
+##Wish List:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. **Undo** You can undo your last move. This would be awesome.
+2. **Graphic Design** People have an unconscious bias for things that have good graphic design. I would bet that between a program with awesome functionality/crappy design vs a program with crappy functionality/awesome design. People will use the crappy functionality one. This is because humans are easily swayed by pretty.
