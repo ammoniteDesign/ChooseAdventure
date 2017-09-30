@@ -1,0 +1,1 @@
+sass --watch C:\Users\heather.elliott\Documents\GitHub\Scum-Quarter\css\style.scss:C:\Users\heather.elliott\Documents\GitHub\Scum-Quarter\css\style.scss.css
