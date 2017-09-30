@@ -8,18 +8,16 @@ import { AppRoutingModule }        from './routing.module';
 
 //Components
 import { AppComponent } from './app.component';
-import { StartComponent } from './start.component';
+import { ScumQuarterComponent } from './scum-quarter.component';
 
 //Services???
-import { BookService } from './get-book.service';
-
+import { BookService } from './book.service';
+import { HeroService } from './hero.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StartComponent
-    //InventoryComponent
-    //BookComponent
+    ScumQuarterComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +26,8 @@ import { BookService } from './get-book.service';
     HttpModule
   ],
   providers: [
-  	BookService
+  	BookService,
+    HeroService
   ],
   bootstrap: [AppComponent]
 })

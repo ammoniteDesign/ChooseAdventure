@@ -8,54 +8,69 @@
 		[
 			{
 				"name": "pistol",
+				"type" : "item",
 				"display": "Dagger Pistol (with powder &amp; balls for five shots)"
 			},
 			{
 				"name": "gold",
+				"type" : "gold",
+				"amount" : 20,
 				"display": "Bag of 20 gold bezants"
+				
 			},
 			{
 				"name": "portrait",
+				"type" : "item",
 				"display": "Portrait of Lady Oiseaux (3'6 square)"
 			},
 			{
 				"name": "handkerchief",
+				"type" : "item",
 				"display": "Scented handkerchief"
 			},
 			{
 				"name": "halberd",
+				"type" : "item",
 				"display": "Halberd"
 			},
 			{
 				"name": "rope",
+				"type" : "item",
 				"display": "20' rope"
 			},
 			{
 				"name": "watch",
+				"type" : "item",
 				"display": "Repeater watch"
 			},
 			{
 				"name": "cognac",
+				"type" : "item",
 				"display": "Bottle El Superbeau Cognac"
 			},
 			{
 				"name": "stockings",
+				"type" : "item",
 				"display": "2 pairs silk stockings"
 			},
 			{
 				"name": "puppet",
+				"type" : "item",
 				"display": "A glove puppet of Cyrano de Bergerac"
 			},
 			{
 				"name": "saint",
+				"type" : "item",
 				"display": "Small plaster saint"
 			},
 			{
 				"name": "perfume",
+				"type" : "item",
 				"display": "Bottle Opossum perfume"
 			},
 			{
 				"name": "spear",
+				"type" : "item",
 				"display": "Five-pronged fish spear"
 			}			
 		],

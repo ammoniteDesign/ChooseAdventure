@@ -6,6 +6,32 @@ export class Hero {
 	//moves: Moves;
 }
 
+
+export class Book {
+	startPage: StartPage;
+	inventoryPage: InventoryPage;
+	bookPages: Page[];
+}
+
+export class StartPage {
+	cheating: boolean;
+}
+
+export class InventoryPage {
+	inventoryChoices: InventoryItem[];
+	amount : number;
+}
+
+export class InventoryItem {
+	name: string;
+	type: string;
+
+	//Nullable
+	display: string;
+	imgUrl: string;
+	amount: number;
+}
+
 export class Page {
 
 	//Must Haves
@@ -33,14 +59,6 @@ export class Option {
 	effect: Effect[]; //Nullable
 }
 
-export class InventoryItem {
-	name: string;
-
-	//Nullable
-	display: string;
-	imgUrl: string;
-}
-
 export class Effect {
 	type: string;
 	action: string;
@@ -48,8 +66,4 @@ export class Effect {
 	//Nullable
 	amount: number; 
 	item: InventoryItem;
-}
-
-export class Book {
-	//Start Page, Inventory Page and BookPages here
 }

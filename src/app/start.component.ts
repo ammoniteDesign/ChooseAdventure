@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Hero } from './classes';
 import { Book } from './classes'
 
-import { BookService } from './get-book.service'
+import { BookService } from './book.service'
 
 @Component({
   selector: 'start',
@@ -10,5 +10,6 @@ import { BookService } from './get-book.service'
 })
 
 export class StartComponent{
-	//private cheating = BookService.book
+	 @Input() book: Book;
+	 @Input() hero: Hero;
 }
