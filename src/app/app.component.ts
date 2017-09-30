@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-
+import {BookService} from './get-book.service';
+import {Book} from './classes';
+import {Hero} from './classes';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +10,4 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 	//title = 'Scum Quarter';
-
-	//Get Da Book
-	// ngOnInit(): void {
-	//     this.bookService.getBook()
-	//       .then(book => this.heroes);
-	//   }
-
 }

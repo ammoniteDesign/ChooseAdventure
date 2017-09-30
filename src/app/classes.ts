@@ -1,3 +1,11 @@
+export class Hero {
+	godMode: boolean;
+	inventory: InventoryItem[];
+	gold: number;
+	dieModifier: number;
+	//moves: Moves;
+}
+
 export class Page {
 
 	//Must Haves
@@ -40,4 +48,8 @@ export class Effect {
 	//Nullable
 	amount: number; 
 	item: InventoryItem;
+}
+
+export class Book {
+	//Start Page, Inventory Page and BookPages here
 }

@@ -513,7 +513,7 @@
 						{
 							"type"   : "inventory",
 							"action" : "empty"
-						}
+						},
 						{
 							"type"   : "gold",
 							"action" : "empty"
@@ -1259,11 +1259,11 @@
 		},
 		{
 			"copy"    : "This was originally a brilliant paragraph detailing a combat with an enraged Purple-Assed Baboon. However, when Adventure 46, “Down to the Chlorophyllic Jungle,” ran short, it had to go over to it. Also, if you are reading this, you must be cheating.",
-			"number" : 81,
+			"number" : 81
 		},
 		{
 			"copy"    : "Eighty-two was also a brilliant paragraph, describing the awesome Slime Serpent that was going to emerge from the Sleine at a strategic moment. Once again, that paragraph had to go over to “Down to the Chlorophyllic Jungle.” Honestly, I don&#8217;t know how Steve Jackson and Ian Livingstone do it. They must be good with numbers or something.. . .",
-			"number" : 82,
+			"number" : 82
 		},
 		{
 			"copy"    : "This is the upmarket part of the Street of Fishmongers—a pleasant, open area, strewn with rancid squid carcasses and buckets of prawns left out in the sun. Smiling merchants offer you slightly fresher wares. You walk through haughtily, oblivious to this crass busi-ness—when, without warning, a fat merchant emerges from behind a crate and knocks you down with his enormous silk-wound belly!",
