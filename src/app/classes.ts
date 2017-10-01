@@ -8,14 +8,10 @@ export class Hero {
 
 
 export class Book {
-	startPage: StartPage;
 	inventoryPage: InventoryPage;
 	bookPages: Page[];
 }
 
-export class StartPage {
-	cheating: boolean;
-}
 
 export class InventoryPage {
 	inventoryChoices: InventoryItem[];

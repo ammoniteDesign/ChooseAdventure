@@ -1,8 +1,4 @@
-{	"startPage" :
-	{
-		"cheating": true
-	},
-	"inventoryPage" :
+{	"inventoryPage" :
 	{
 		"inventoryChoices": 
 		[

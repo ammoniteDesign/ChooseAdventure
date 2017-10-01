@@ -12,18 +12,8 @@ export class BookService {
 	) { }
 	
 
-	getBook(url: string): Promise<Book> {
+	getBook(url: string): Promise<any> {
 		//Call and return result
-		return this.http.get(url)
-			.toPromise()
-			.then (response => response.json().data as Book)
-			.catch(this.handleError)
-	}
-
-
-
-	private handleError(error: any): Promise<any> {
-		console.error('An error occurred', error); // for demo purposes only
-		return Promise.reject(error.message || error);
+		return this.http.get(url).toPromise()
 	}
 }

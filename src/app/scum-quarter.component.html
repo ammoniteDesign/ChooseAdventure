@@ -1,18 +1,70 @@
-Down to the Scum Quarter
-A Farcical Fantasy Solo Adventure
+<h2>Down to the Scum Quarter</h2>
+<main *ngIf="phase === 0">
+	<p>Start Page</p>
+
+	<h3>Farcical Fantasy Solo Adventure</h3>
 
 
-How to Play
+	<h4>How to Play</h4>
+	<ol>
+		<li>
+			1. Decide whether you’re going to cheat or not. Most people cheat in solo adventures, even if they don’t admit it. If you’re not going to cheat, get a six-sided die.
+		</li>
+		<li>
+			2. Go down to the local costume rental shop and get a Three Musketeers outfit. This is called “getting into character.”
+		</li>
+		<li>
+			3. If you’re old enough, stop by the liquor store on the way back and pick up a few bottles of cheap red wine.
+		</li>
+		<li>
+			4. Rent a video of The Three Musketeers. Start watching it, and practice knocking the tops off the wine bottles with your plastic rapier. This is called “getting the atmosphere.”
+		</li>
+		<li>
+			5. Give up after you break the rapier, and open a bottle with a corkscrew. Drink all of it.
+		</li>
+		<li>
+			6. Read “The Prelude.”
+		</li>
+		<li>
+			7. Select five items from the list of equipment (unless cheating,in which case you presume you always have exactly what you need).
+		</li>
+		<li>
+			8. Go to “The Adventure Begins!”
+		</li>
+		<li>
+			9. Carefully evaluate the situation, choose a course of action, and go to the paragraph indicated, rolling a die when necessary.
+		</li>
+	</ol>
 
-1. Decide whether you’re going to cheat or not. Most people cheat in solo adventures, even if they don’t admit it. If you’re not going to cheat, get a six-sided die.
-2. Go down to the local costume rental shop and get a Three Musketeers outfit. This is called “getting into character.”
-3. If you’re old enough, stop by the liquor store on the way back and pick up a few bottles of cheap red wine.
-4. Rent a video of The Three Musketeers. Start watching it, and practice knocking the tops off the wine bottles with your plastic rapier. This is called “getting the atmosphere.”
-5. Give up after you break the rapier, and open a bottle with a corkscrew. Drink all of it.
-6. Read “The Prelude.”
-7. Select five items from the list of equipment (unless cheating,in which case you presume you always have exactly what you need).
-8. Go to “The Adventure Begins!”
-9. Carefully evaluate the situation, choose a course of action, and go to the paragraph indicated, rolling a die when necessary.
+	<h4>The Simple Method:</h4>
+	<p>Get a 6-sided die, and ignore steps 2–5.</p>
 
-The Simple Method:
-Get a 6-sided die, and ignore steps 2–5.
+	<button (click)="startAdventure()">I am the soul of Honor</button><button (click)="startAdventure(true)">I am totally going to cheat</button>
+</main>
+<main *ngIf="phase === 1">
+	<p>Inventory Page</p>
+	<!-- TODO: Make Recative Form? -->
+	<form *ngIf="hero.godMode === false" (ngSubmit)="onSubmit()"> 
+		<p *ngFor="let inventoryItem of book.inventoryPage.inventoryChoices">
+			<input
+				type="checkbox" 
+				name="inventory" 
+				value="{{inventoryItem.name}}"
+				>
+				
+			{{inventoryItem.display}}
+		</p>
+		<p *ngFor="let chosenInventory of hero.inventoryItem">
+			name: {{chosenInventory.name}}
+			display: {{chosenInventory.display}}
+		</p>
+		<button type="sumbit" [disabled]="phase === 1">Let's Go!</button>
+	</form>
+	<article *ngIf="hero.godMode === true">
+		<p>I am a god!</p>
+		<button>Let's go!</button>
+	</article>
+</main>
+<main *ngIf="phase === 2">
+	<p>Book Page</p>
+</main>

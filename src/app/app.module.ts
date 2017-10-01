@@ -19,6 +19,9 @@ import { HeroService } from './hero.service';
     AppComponent,
     ScumQuarterComponent
   ],
+  entryComponents: [ 
+    ScumQuarterComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
