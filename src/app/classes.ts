@@ -21,7 +21,8 @@ export class InventoryPage {
 export class InventoryItem {
 	name: string;
 	type: string;
-
+	chosen : boolean;
+	
 	//Nullable
 	display: string;
 	imgUrl: string;

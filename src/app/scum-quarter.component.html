@@ -44,21 +44,18 @@
 <main *ngIf="phase === 1">
 	<p>Inventory Page</p>
 	<!-- TODO: Make Recative Form? -->
-	<form *ngIf="hero.godMode === false" (ngSubmit)="onSubmit()"> 
+	<form *ngIf="hero.godMode === false" (ngSubmit)="setInventory()"> 
 		<p *ngFor="let inventoryItem of book.inventoryPage.inventoryChoices">
 			<input
 				type="checkbox" 
 				name="inventory" 
 				value="{{inventoryItem.name}}"
-				>
+				(change)="chooseInventory($event.target.checked, inventoryItem)"
+				[disabled]="hero.inventory.length > 4 && !inventoryItem.chosen">
 				
 			{{inventoryItem.display}}
 		</p>
-		<p *ngFor="let chosenInventory of hero.inventoryItem">
-			name: {{chosenInventory.name}}
-			display: {{chosenInventory.display}}
-		</p>
-		<button type="sumbit" [disabled]="phase === 1">Let's Go!</button>
+		<button type="sumbit" [disabled]="hero.inventory.length < 5">Let's Go!</button>
 	</form>
 	<article *ngIf="hero.godMode === true">
 		<p>I am a god!</p>
@@ -68,3 +65,4 @@
 <main *ngIf="phase === 2">
 	<p>Book Page</p>
 </main>
+<!--  -->

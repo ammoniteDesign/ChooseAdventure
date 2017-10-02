@@ -5,68 +5,81 @@
 			{
 				"name": "pistol",
 				"type" : "item",
+				"chosen" : false,
 				"display": "Dagger Pistol (with powder &amp; balls for five shots)"
 			},
 			{
 				"name": "gold",
 				"type" : "gold",
 				"amount" : 20,
+				"chosen" : false,
 				"display": "Bag of 20 gold bezants"
 				
 			},
 			{
 				"name": "portrait",
 				"type" : "item",
+				"chosen" : false,
 				"display": "Portrait of Lady Oiseaux (3'6 square)"
 			},
 			{
 				"name": "handkerchief",
 				"type" : "item",
+				"chosen" : false,
 				"display": "Scented handkerchief"
 			},
 			{
 				"name": "halberd",
 				"type" : "item",
+				"chosen" : false,
 				"display": "Halberd"
 			},
 			{
 				"name": "rope",
 				"type" : "item",
+				"chosen" : false,
 				"display": "20' rope"
 			},
 			{
 				"name": "watch",
 				"type" : "item",
+				"chosen" : false,
 				"display": "Repeater watch"
 			},
 			{
 				"name": "cognac",
 				"type" : "item",
+				"chosen" : false,
 				"display": "Bottle El Superbeau Cognac"
 			},
 			{
 				"name": "stockings",
 				"type" : "item",
+				"chosen" : false,
 				"display": "2 pairs silk stockings"
 			},
 			{
 				"name": "puppet",
 				"type" : "item",
+				"chosen" : false,
 				"display": "A glove puppet of Cyrano de Bergerac"
 			},
 			{
 				"name": "saint",
 				"type" : "item",
+				"chosen" : false,
 				"display": "Small plaster saint"
 			},
 			{
 				"name": "perfume",
 				"type" : "item",
+				"chosen" : false,
 				"display": "Bottle Opossum perfume"
 			},
 			{
 				"name": "spear",
 				"type" : "item",
+				"chosen" : false,
 				"display": "Five-pronged fish spear"
 			}			
 		],
