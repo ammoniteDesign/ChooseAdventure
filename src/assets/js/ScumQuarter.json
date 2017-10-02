@@ -85,35 +85,33 @@
 		],
 		"amount" : 5
 	},
-	"bookPages" :
-	[
-		{
+	"bookPages" : {
+		"1" : {
 			"copy"    : "Moving from shadow to shadow down the wide Boulevard of the Muses, you feel very much like the intrepid adventurer hurrying to rescue his beloved lady. You are so caught up in this delightful little daydream that you don&#8217;t notice the six Watchmen following your erratic shadow-to-shadow progression down the street till you go one shadow too many and find yourself caught in the glare of their lanterns.",
-			"number": 1,
 			"options" : [
 				{				
 					"copy"      : "If you are carrying a halberd or five-pronged fish spear, Go to 50",
-					"page"      : 50,
+					"page"      : "50",
 					"equipment" : ["halberd", "spear"],
-					"equipmentState"   : true
+					"equipmentState"   : "any"
 					
 				},
 				{			
 					"copy"      : "If you aren&#8217;t carrying either of these, Go to 30",
-					"page"      : 30,
+					"page"      : "30",
 					"equipment" : ["halberd", "spear"],
-					"equipmentState"   : false						
+					"equipmentState"   : "none"						
 				}
 			]
 		},
-		{
+		"2" : {
 			"copy"    : "Who do you think you are&#8212;the unnatural offspring of the Three Musketeers and Michael York? Roll one die.",
 			"number" : 2, 
 			"die" : true,
 			"options" : [
 				{
 					"copy"     : "At least you feinted toward somebody&#8217;s left eye. Pity it was your own. Then you stuck your rapier in your left foot....The bravo takes pity on you and lets you limp away. Minus one on all future combat rolls due to both stupidity and injury. Go to 52",
-					"page"     : 52,
+					"page"     : "52",
 					"roll"     : [1,2,3],
 					"effect"   : [{
 						"type" : "roll",
@@ -123,44 +121,44 @@
 				},
 				{
 					"copy"     : "Both of you fence away quite competently, crying &#8220;Caramba!&#8221; and &#8220;Take that! And that! And this little one! And that.&#8221;Eventually you become so tired, you lean on your swords and just whisper: &#8220;Aha&#8212;foul blaggard!&#8221; etc. The bravo gets bored of this first, and leaves. You rest briefly, then continue on your way. Go to 52",
-					"page"     : 52,
+					"page"     : "52",
 					"roll"     : [4]
 				},
 				{
 					"copy"        : "Your fencing master would be proud&#8212;there&#8217;s always a first time. You feint, parry, and riposte as if you knew Errol Flynn intimately when you were a young boy&#8212;and tried to keep him at a distance. The bravo is struck several times and retires bleeding to the nearest laundress. You continue on your way. Go to 52",
-					"page"     : 52,
+					"page"     : "52",
 					"roll"     : [5,6]
 				}
 			]				
 		},
-		{
+		"3" : {
 			"copy"    : "Descending to the next floor, you find yourself in a barbershop, the walls lined with mirrors. There are four doors, sixteen reflections, and a trapdoor.",
 			"number" : 3,
 			"options" : [
 				{
 					"copy"        : "Do you go through the door marked with a tiger? Go to 85",
-					"page"     : 85
+					"page"     : "85"
 					
 				},
 				{
 					"copy"        : "Or the door marked with a lady? Go to 39",
-					"page"     : 39
+					"page"     : "39"
 				},
 				{
 					"copy"        : "Or through the door marked with both a lady and a tiger? Go to 34",
-					"page"     : 34
+					"page"     : "34"
 				},
 				{
 					"copy"        : "Or the one with two ladies and a tiger? Go to 92",
-					"page"     : 92
+					"page"     : "92"
 				},
 				{
 					"copy"        : "Or through the trapdoor, which is marked with a lamb chop? Go to 58",
-					"page"     : 58
+					"page"     : "58"
 				}
 			]
 		},
-		{
+		"4" : {
 			"copy"    : "It&#8217;s not very nice up the Emperor August&#8217;s nostril. Four or five hundred bats seem to have used it as a toilet for about a century. You wait inside for several minutes, then emerge as a grotesque mound of bat guano. The balloon is still there, but whoever is in it doesn&#8217;t recognize you. Add one to all future combat rolls due to your repellent exterior.",
 			"number" : 4,
 			"effect" : [{
@@ -171,37 +169,37 @@
 			"options" : [
 				{
 					"copy"     : "You head south. Go to 54",
-					"page"     : 54
+					"page"     : "54"
 					
 				}
 			]
 		},
-		{
+		"5" : {
 			"copy"    : "You smile sickeningly and cross over to the tiger, mumbling &#8220;nice pussums . . . good kit-e-kat.. . .&#8221; You reach down to scratch its stomach, and it grabs you with both paws and bites your head off. As your soul becomes a delicate butterfly and floats off to the transit lounge, you feel that this would never have happened if you had read The Jungle Books as a child. The End.",
 			"number" : 5,
 			"end" : true
 		},
-		{
+		"6" : {
 			"copy"    : "The Western Wall Originally built to hold out the barbarians, the Western Wall fell into disrepair when the barbarians became civilized and bought the city in an underhanded real-estate deal. Now only a crumbling ruin inhabited by thieves, cutthroats, and defrocked clergymen, the wall is rarely visited by anyone else. You remember this as a defrocked clergyman bears down on you, swinging his incense pot with deadly intent.",
 			"number" : 6,
 			"options" : [
 				{
 					"copy"        : "Do you get out your five-pronged fish spear, leer evilly, and say: &#8220;How many prongs do you want, and where do you want them?&#8221; Go to 77",
-					"page"     : 77					
+					"page"     : "77"	
 				},
 				{
 					"copy"        : "Run back to the Arc de Trihump? Go to 99",
-					"page"     : 99
+					"page"     : "99"
 				}
 			]
 		},
-		{
+		"7" : {
 			"copy"    : "You stand in the line before the main entrance to the Quay of Scented Rats&#8212;a vast, overdecorated houseboat that is now firmly embedded in the mudflats of the Sleine. At the front of the line two burly men (who look suspiciously like beavers) demand the five-bezant entry fee.",
 			"number" : 7,
 			"options" : [
 				{				
 					"copy"       : "Do you pay them? Go to 55",
-					"page"       : 55,
+					"page"       : "55",
 					"gold"       : 5,
 					"effect"    : [{
 						"type"   : "gold",
@@ -211,44 +209,44 @@
 				},
 				{			
 					"copy"      : "Say, &#8220;Back off, bucktooth. I&#8217;m with Scum Quarter Vice&#8221;? Go to 36",
-					"page"      : 36
+					"page"      : "36"
 				},
 				{				
 					"copy"      : "Offer them the bottle of El Superbeau cognac? Go to 17",
-					"page"      : 17,
+					"page"      : "17",
 					"equipment" : ["cognac"],
-					"equipmentState" : true
+					"equipmentState" : "any"
 				}
 			]
 		},
-		{
+		"8" : {
 			"copy"    : "Hanging by one hand, you tie the rope to the sail and climb down to the next one. From this one you climb through a window to the inside of the mill.",
 			"number" : 8,
 			"options" : [
 				{
 					"copy"     : "Go to 35",
-					"page"     : 35
+					"page"     : "35"
 				}
 			]
 		},
-		{
+		"9" : {
 			"copy"    : "You wrench the door open and leap through it. But will you evade the tiger? Roll one die.",
 			"number" : 9,
 			"options" : [
 				{
 					"copy"        : "Damn! The doorknob would be stiff.. . . You half turn to meet your doom like a brave warrior, but the tiger smashes you to the floor, and you let out a pitiful little shriek instead. Fortunately, this is the exact cry of an orphan tiger cub! The tiger stands back, bemused, while you crawl across the room and out through the exit. Go to 79",
-					"page"     : 79,
+					"page"     : "79",
 					"roll"     : [1,2,3]
 				},
 				{
 					"copy"        : "The door slams shut just as the tiger slams against the other side. You lean against it, sweating in fear. Go to 79",
-					"page"     : 79,
+					"page"     : "79",
 					"roll"     : [4, 5, 6]
 				}
 			],
 			"die" : true
 		},
-		{
+		"10" : {
 			"copy"    : "You wrench open the bottle of Opossum perfume and scatter a few drops toward the awful hag. A beautiful aroma fills the room, and she steps back, spitting and cursing. &#8220;Back, foul fiend!&#8221; you cry, throwing a few more drops, which burn through her outstretched arm like acid&#8212;so you throw the whole bottle and bolt for the exit. You don&#8217;t look back.",
 			"number" : 10,
 			"effect"    : [{
@@ -259,11 +257,11 @@
 			"options" : [
 				{
 					"copy"        : "Go to 35",
-					"page"     : 35
+					"page"     : "35"
 				}
 			]
 		},
-		{
+		"11" : {
 			"copy"    : "Just as you are about to fleché across the room and drive your rapier through the poor unsuspecting woman&#8217;s heart, a great gong rings . . . and time stops. As the echoes of the gong die away, a disembodied voice fills the room with the weary pronouncement, “The Age of Chivalry Is Now Officially Dead.” Time suddenly resumes, but your heart isn&#8217;t in the wild attack, so you merely lunge at the tiger. It backs off snarling; you circle around to the other door and duck through it. As you leave, the woman throws the voodoo doll at your head. Subtract one from all future combat rolls due to wax burns on your face.",
 			"number" : 11,
 			"effect"    : [{
@@ -274,83 +272,83 @@
 			"options" : [
 				{
 					"copy"        : "Go to 79",
-					"page"     : 79
+					"page"     : "79"
 				}
 			]
 		},
-		{
+		"12" : {
 			"copy"    : "And you thought the Street of Fishmongers smelt bad. Obviously this is where all the fish guts end up after the beggars have tried to eat them—for the second time. At the other end of the alley, a hulking giant of a man is standing, a spiked club in his hand. ",
 			"number" : 12,
 			"options" : [
 				{
 					"copy"        : "Do you approach him for directions to the Sleine? Go to 57",
-					"page"     : 57
+					"page"     : "57"
 				},
 				{
 					"copy"        : "Or return to the Street of Fishmongers? Go to 41",
-					"page"     : 41
+					"page"     : "41"
 				}
 			]
 		},
-		{
+		"13" : {
 			"copy"    : "As your hand touches the hilt of your rapier, you start, and the eyes in your head bulge dramatically. The hag is wearing the Black Apron of a Master of Cleaver-Fu—a deadly martial art you cannot possibly cope with!",
 			"number" : 13,
 			"options" : [
 				{
 					"copy"        : "Go to 62",
-					"page"     : 62
+					"page"     : "62"
 				}
 			]
 		},
-		{
+		"14" : {
 			"copy"    : "There really is nothing like just messing about in boats. Pitting one&#8217;s strength against the vicious tidal bores that sweep up the river, or the onrush of sewage from the city that sweeps down. But lo! There on the port bow you see a heavily decorated houseboat, firmly embedded in the mudflats. The heavy use of purple fur around the windows (and fake gold trim on the gutters) convinces you this must be the infamous Quay of Scented Rats.",
 			"number" : 14,
 			"options" : [
 				{
 					"copy"        : "Do you heroically leap from your boat as you pass the Quay of Scented Rats, do a triple somersault in the air, and land upon its sleazy deck with an air of casual arrogance? Go to 64",
-					"page"     : 64
+					"page"     : "64"
 				},
 				{
 					"copy"        : "Or cautiously pole up to one end, tie up your boat, and sneak aboard like a rat? Go to 26",
-					"page"     : 26
+					"page"     : "26"
 				}
 			]
 		},
-		{
+		"15" : {
 			"copy"    : "You emerge into a long corridor lined with various prints of the activities of the Quay of Scented Rats. To your right there is a door marked “Auction Goods.” To your left there is a door marked “Not the Auction Goods.”",
 			"number" : 15,
 			"options" : [
 				{
 					"copy"        : "Do you go left? Go to 80",
-					"page"     : 80
+					"page"     : "80"
 				},
 				{
 					"copy"        : "Or right? Go to 23",
-					"page"     : 23
+					"page"     : "23"
 				}
 			]
 		},
-		{
+		"16" : {
 			"copy"    : "You sneak past the hustlers of the Southgate and out through a postern. Before you lie the winding, deep-blue waters of the River Sleine, alive with wildfowl amid the teeming rushes.. . . Then your eyes clear and you realize you are looking at a picture tacked to the postern door. You open it, and there before you lies the turgid, coal-black watercourse that makes slimy pollution look good—the true River Sleine. Steps lead down toward the river, and you think you can see a boat tied up at the bottom.",
 			"number" : 16,
 			"options" : [
 				{
 					"copy"        : "Do you go down? Go to 27",
-					"page"     : 27
+					"page"     : "27"
 				},
 				{
 					"copy"        : "Or turn back, you coward, only to be killed by a lightning-struck albatross falling out of the sky? (This is called a premonition.) Go to 45",
-					"page"     : 45
+					"page"     : "45"
 				}
 			]
 		},
-		{
+		"17" : {
 			"copy"    : "“Before we descend to crass commercial transactions,” you say suavely, “you may care to have a drop of...El Superbeau cognac.” You hold the bottle in front of them as they drool and reach out with grasping fin-gers—then fling it into the Sleine! The two guards hurl themselves into the slime, desperate to reach it before it gurgles away into the murky depths. Seconds later, you are flattened as a horde of eager customers storms across the bridge. You get up wearily and hobble after them.",
 			"number" : 17,
 			"options" : [
 				{
 					"copy"        : "Go to 61",
-					"page"     : 61,
+					"page"     : "61",
 					"effect"    : [{
 						"type"   : "inventory",
 						"action" : "remove",
@@ -359,28 +357,28 @@
 				}
 			]
 		},
-		{
+		"18" : {
 			"copy"    : "The merchant reels back, a garfish sticking out of his left ear. Bleating with fear, he crashes into another merchant&#8217;s stall. Within seconds, the Place of Plaice becomes a whirling mass of rioting merchants, customers, and airborne tubs of fish. You have to get out! You run toward the Arc de Trihump.",
 			"number" : 18,
 			"options" : [
 				{
 					"copy"        : "Go to 99",
-					"page"     : 99
+					"page"     : "99"
 				}
 			]
 		},
-		{
+		"19" : {
 			"copy"    : "Roll one die.",
 			"number" : 19,
 			"options" : [
 				{
 					"copy"        : "The man in black is entranced. Your fingers manipulate Cyrano&#8217;s arms briliantly, andhis rapierflickers back and forth, gleaming in the light from the two-hundred-watt chandelier above. Z draws closer and closer . . . then you strike. The puppet&#8217;s sword shears off halfof Z&#8217;s mustache! Shrieking, hebursts past you, smashes through the door, and runs away. Goto 100",
-					"page"     : 100,
+					"page"     : "100",
 					"roll"     : [1,2,3]
 				},
 				{
 					"copy"        : "You are a little nervous, and Cyrano moves jerkily, producing a very second-rate display of swordsmanship. Z watches for a while, then exclaims: “Non! Non! Ziss iz not ze way ze Thibault iz exerzized! Give eet to me!” You hand over the puppet. Soon Z is totally occupied, putting Cyrano through the seventy-seven Lunges of Señor Ricardo. You slink past. Go to 100",
-					"page"     : 100,
+					"page"     : "100",
 					"roll"     : [4,5,6],
 					"effect"    : [{
 						"type"   : "inventory",
@@ -391,116 +389,116 @@
 			],
 			"die" : true
 		},
-		{
+		"20" : {
 			"copy"    : "“Twenty!” you exclaim, exhibiting profound knowledge of history that hasn&#8217;t happened yet, the current year being a sort of alternate 1624. Still, “What&#8217;s an anachronism between friends?” you mutter to yourself. Z takes this as a riddle and begins to knead his forehead in deep thought. Six hours later, still unable to answer your question, he overexerts his brain and faints away. You step over his unconscious form and go through the door.",
 			"number" : 20,
 			"options" : [
 				{
 					"copy"        : "Go to 100",
-					"page"     : 100
+					"page"     : "100"
 				}
 			]
 		},
-		{
+		"21" : {
 			"copy"    : "A broad and leafy avenue, much frequented by bands of rioters from the Green and Blue factions of the donkey-cart races. Many bravos stalk the avenue, seeking opponents from rival factions.",
 			"number" : 21,
 			"options" : [
 				{				
 					"copy"         : "Are you wearing a blue one-piece body stocking? Go to 33",
-					"page"      : 33,
+					"page"      : "33",
 					"equipment" : ["bodyStocking"],
 					"equipmentState" : "any"
 					
 				},
 				{			
 					"copy"         : "Are you wearing something else? Go to 33 anyway",
-					"page"      : 33,
+					"page"      : "33",
 					"equipment" : ["bodyStocking"],
 					"equipmentState"   : "none"
 					
 				}
 			]
 		},
-		{
+		"22" : {
 			"copy"    : "You stand there, gaping. The shadow of the balloon looms closer and closer, and the stench of manure is overpowering. A man in a pin-striped suit looks out at you and says, “Nah—he hasn&#8217;t got what it takes,” and the balloon flies on. Sometimes it pays to be a ninny.",
 			"number" : 22,
 			"options" : [
 				{
 					"copy"        : "Go to 54",
-					"page"     : 54
+					"page"     : "54"
 				}
 			]
 		},
-		{
+		"23" : {
 			"copy"    : "You open the door marked “Auction Goods” only to be confronted by the giggling eunuch you may have been unlucky enough to see earlier. The thin, sickly man accompanying him carries a gladstone bag in one hand and a gleaming scalpel in the other. The eunuch titters, “That&#8217;s him, Doc!” and leaps forward to pinion you in his blubbery arms.",
 			"number" : 23,
 			"options" : [
 				{
 					"copy"        : "Do you trip the eunuch, use him as a springboard, hurtle through the air, head butt the doctor, somersault, and land on your feet whistling “Dixie”? Go to 68",
-					"page"     : 68
+					"page"     : "68"
 				},
 				{
 					"copy"        : "Or pirouette gracefully and bolt back through the door? Go to 47",
-					"page"     : 47
+					"page"     : "47"
 				}
 			]
 		},
-		{
+		"24" : {
 			"copy"    : "Your rapier is barely out of its scabbard before the black-clad man has reduced your clothing to tatters. Little “z”s have been cut in every available piece of cloth and leather. Your trousers fall down.",
 			"number" : 24,
 			"options" : [
 				{
 					"copy"        : "Do you attempt to continue this rather farcical duel? Go to 73",
-					"page"     : 73
+					"page"     : "73"
 				},
 				{
 					"copy"        : "Or say, “Sorry—wrong door,” and back out, holding up your trousers with both hands, rapier clutched between your teeth? Go to 94",
-					"page"     : 94
+					"page"     : "94"
 				}
 			]
 		},
-		{
+		"25" : {
 			"copy"    : "“You sure it&#8217;s only a five-pronged fish spear?” asks the Sergeant. “Because a six-pronged fish spear is a different kettle of . . .” “Halberds?” you suggest. “Right. That&#8217;s a different kettle of halberds. Now, be on your way.” You leave the Sergeant and his men discussing what a kettle of halberds would actually look like, and proceed to the Street of Fishmongers.",
 			"number" : 25,
 			"options" : [
 				{
 					"copy"        : "Go to 41",
-					"page"     : 41
+					"page"     : "41"
 				}
 			]
 		},
-		{
+		"26" : {
 			"copy"    : "You pole to the southern end of the gaudy monstrosity and carefully tie up your boat. Several guards look over the railing at you, but you remember your Mandrake lessons well. A few hypnotic passes convince them you are a harmless moron who thinks he&#8217;s a rat. Squeaking feverishly, you swarm up the bowline and onto the deck—then it is but the work of moments to chew a gaping hole in a nearby door.",
 			"number" : 26,
 			"options" : [
 				{
 					"copy"        : "Go to 44",
-					"page"     : 44
+					"page"     : "44"
 				}
 			]
 		},
-		{
+		"27" : {
 			"copy"    : "You leap into the boat just like Captain Silver used to—but he only had one leg, so it was excusable. Eventually you get upright again, ship the oars, hoist the topgallants, splice the mainbrace, cast off, and purl three. That all taken care of, you push off with a piece of old stick and head downstream. Far off, you can see pink lights on the water and smell cheap scent. There lies the infamous Quay of Scented Rats. You pole on.",
 			"number" : 27,
 			"options" : [
 				{
 					"copy"        : "Go to 14",
-					"page"     : 14
+					"page"     : "14"
 				}
 			]
 		},
-		{
+		"28" : {
 			"copy"    : "Roll one die.",
 			"number" : 28,
 			"options" : [
 				{
 					"copy"        : "As you poke out your tongue, you slip on some slimy fish and bite the end off this valuable appendage. The pain is intense! You drop your rapier and stagger about howling. The hulking giant runs away in terror. Go to 95",
-					"page"     : 95,
+					"page"     : "95",
 					"roll"     : [1,2]
 				},
 				{
 					"copy"        : "To cut a long story short, the hulking giant gets in a few good blows and gives you a black eye before you see him off with some little cuts to the face. Subtract one from all future combat rolls due to partial blindness. Go to 95",
-					"page"     : 95,
+					"page"     : "95",
 					"roll"     : [3,4],
 					"effect"    : [{
 						"type"   : "roll",
@@ -510,7 +508,7 @@
 				},
 				{
 					"copy"        : "The tongue goes out . . . the rapier goes in. The hulking man is surprised. So are you—you nervously let go of your rapier. The giant staggers off with it still in his chest. You chase after him, and pull it out when he falls over and expires. A quick search gains you a silver Bixby—a pair of long-handled biscuit tongs. Go to 95",
-					"page"     : 95,
+					"page"     : "95",
 					"roll"     : [5,6],
 					"effect"    : [{
 						"type"   : "inventory",
@@ -525,13 +523,13 @@
 			],
 			"die" : true
 		},
-		{
+		"29" : {
 			"copy"    : "The tigers settle back down as you sit, and the two women explain that they&#8217;re playing a local variation of poker, where a red two is called the tiger and can be used as any other card. There are a number of other special rules, but you&#8217;re sure you can get the hang of it. Roll one die.",
 			"number" : 29,
 			"options" : [
 				{
 					"copy"        : "You lose all your money and possessions, except for your clothes and rapier. You&#8217;re sure there&#8217;s cheating going on, but every time you try to look more closely at the others, or under the table, the tigers come and breathe heavily in your ear, licking their chops and slavering. After an hour you retire gracefully through the other door, declining their offer of “just another hand.” Go to 79",
-					"page"     : 79,
+					"page"     : "79",
 					"roll"     : [1,2,3],
 					"effect"    : [
 						{
@@ -546,7 +544,7 @@
 				},
 				{
 					"copy"        : "You know they&#8217;re cheating after about fifteen minutes. Those tigers are reading your cards and signaling to the women by twitching their whiskers. With this knowledge, you keep your losses to a minimum—and lose half your money. After about ten hands, you get up to “stretch your dealing hand,” and dash through the other door, the tigers hot on your heels. Go to 79",
-					"page"     : 79,
+					"page"     : "79",
 					"roll"     : [4,5],
 					"effect"    : [{
 						"type"   : "gold",
@@ -556,7 +554,7 @@
 				},
 				{
 					"copy"        : "Ah, those long days spent visiting your grandfather in Cell 3B of The Pastille (an infamous lozenge-shaped prison) at last reap their reward. You use all your dear grandpapa&#8217;s tricks and win twenty-eight bezants over sixteen hands. You bow gracefully, thank the ladies for the game, and saunter to the exit, gloating over your newfound wealth. Go to 79",
-					"page"     : 79,
+					"page"     : "79",
 					"roll"     : [6],
 					"effect"    : [{
 						"type"   : "gold",
@@ -567,37 +565,37 @@
 			],
 			"die" : true
 		},
-		{
+		"30" : {
 			"copy"    : "“Wot, I say, wot &#8217;ave we &#8217;ere, then?” says the Watch Sergeant, in the peculiar patois spoken by Watchmen everywhere. “Oi (I) fink (think) we might &#8217;ave (have) a Nimoy (person in search of something) &#8217;ere (at this location) . . . perhaps (perhaps) searching (looking) for his lost (mislaid) demoiselle (lady who drinks a lot of sweet white wine).” While the other Watchmen are trying to translate the Sergeant&#8217;s words with their Watch Patois/English phrasebooks, you slink past and continue on your way.",
 			"number" : 30,
 			"options" : [
 				{
 					"copy"        : "Go to 41",
-					"page"     : 41
+					"page"     : "41"
 				}
 			]
 		},
-		{
+		"31" : {
 			"copy"    : "“The Carved Heads of Past Emperors were once ranked as the four hundred sixteenth wonder of the world. Now only twenty of the sixty heads carved into the Eastern Wall have any discernible features. You scan them briefly, but the Montgolfier is still approaching from behind.",
 			"number" : 31,
 			"options" : [
 				{
 					"copy"        : "Do you hide up the stone nostril of Emperor August the 10th? Go to 4",
-					"page"     : 4
+					"page"     : "4"
 				},
 				{
 					"copy"        : "Climb the profile of HIH Alfredo (known as “Alfredo the Chinless”)? Go to 89",
-					"page"     : 89
+					"page"     : "89"
 				}
 			]
 		},
-		{
+		"32" : {
 			"copy"    : "The hag raises her cleaver as you reach inside your doublet, then drops it on the floor as you proffer the silk stockings. “Just what I wanted for my thuggee lessons!” she exclaims, swiftly making the stockings into a noose and looking around for a test neck. But you are long gone, running like a young colt (i.e., on shaky legs), through the other door.",
 			"number" : 32,
 			"options" : [
 				{
 					"copy"        : "Go to 79",
-					"page"     : 79,
+					"page"     : "79",
 					"effect"    : [{
 						"type"   : "inventory",
 						"action" : "remove",
@@ -606,69 +604,69 @@
 				}
 			]
 		},
-		{
+		"33" : {
 			"copy"    : "As you casually saunter down the avenue in your unobtrusive blue body stocking (or whatever), a bravo leaps out, brandishing his rapier. You have only a moment to realize that he is dressed entirely in green before combat is upon you.",
 			"number" : 33,
 			"options" : [
 				{
 					"copy"        : "Do you tremble with fear, knock your knees together, and start blubbering? Then, when he starts laughing, whip out a pistol and blow the smirk off the blaggard&#8217;s face? (You must have a pistol.) Go to 76",
-					"page"      : 76,
+					"page"      : "76",
 					"equipment" : ["pistol"],
 					"equipmentState"   : "any"
 					
 				},
 				{
 					"copy"        : "Or feint toward his left eye, parry in sixte, and riposte over your shoulder, plunging your rapier through the knave&#8217;s heart? Go to 2",
-					"page"      : 2
+					"page"      : "2"
 				}
 			]
 		},
-		{
+		"34" : {
 			"copy"    : "A harsh-faced woman looks up from her voodoo doll as you enter and screams, “A burglar! Sic him, Tiggums!” A tiger leaps down on you from a platform above the door.",
 			"number" : 34,
 			"options" : [
 				{
 					"copy"        : "Do you run back through the door? Go to 9",
-					"page"     : 9
+					"page"     : "9"
 					
 				},
 				{
 					"copy"        : "Fleché across the room and run the woman through? Go to 11",
-					"page"     : 11
+					"page"     : "11"
 					
 				},
 				{
 					"copy"        : "Shoot the tiger with your pistol? Go to 43",
-					"page"      : 43,
+					"page"      : "43",
 					"equipment" : ["pistol"],
 					"equipmentState"   : "any"
 					
 				}
 			]
 		},
-		{
+		"35" : {
 			"copy"    : "You are now on one of the floors of the windmill. It is an eerie place, all white with flour dust, and the sound of the creaking sails and machinery echoing in every nook and cranny. Strange cogs and mechanical arms move back and forth, and a central driveshaft turns with uncanny speed. There is a piece of paper lying on the floor.",
 			"number" : 35,
 			"options" : [
 				{
 					"copy"        : "Do you pick it up? Go to 60",
-					"page"     : 60
+					"page"     : "60"
 					
 				},
 				{
 					"copy"        : "Or ignore it, trip, and fall down the central driveshaft into the grinding stones below? Go to 70",
-					"page"     : 70
+					"page"     : "70"
 					
 				}
 			]
 		},
-		{
+		"36" : {
 			"copy"    : "They look at you, taking in your cheap cloak, three-bezant haircut, muddy boots, and distinct lack of a Ferrari-red palanquin. “Make that ten bezants, for trying to be smart,” says one, crushing a rock and snorting the fragments to show how tough he is.",
 			"number" : 36,
 			"options" : [
 				{
 					"copy"        : "Do you pay ten bezants? Go to 55",
-					"page"     : 55,
+					"page"     : "55",
 					"gold"  : 10,
 					"effect"    : [{
 						"type"   : "gold",
@@ -678,426 +676,426 @@
 				},
 				{
 					"copy"        : "Go back to the end of the line? Go to 7",
-					"page"     : 7
+					"page"     : "7"
 					
 				},
 				{
 					"copy"        : "Or follow the river westish, hoping to find another way to the Quay of Scented Rats? Go to 52",
-					"page"     : 52
+					"page"     : "52"
 				}
 			]
 		},
-		{
+		"37" : {
 			"copy"    : "Your arms get more and more tired, the wind comes up, and it starts raining. You almost fall several times. Then, in desperation, you start to climb down. Unfortunately, you slip, slide down the wind-mill&#8217;s roof, and out... down at least forty feet. Fortunately, the hunchback breaks your fall . . . and you break both your legs. You crawl away before the hunchback regains consciousness. For you, this adventure is over, and you are about to embark upon another. (See “The Ferocious Bill of Orthopedic Surgeon Fu Manchu” Adventure 27 in this series.)",
 			"number" : 37,
 			"end"     : true
 		},
-		{
+		"38" : {
 			"copy"    : "Roll one die.",
 			"number" : 38,
 			"options" : [
 				{
 					"copy"        : "You back off, and off—this guy twirls his club so fast, you think he may moonlight as a windmill. He drives you back to the Place of Plaice before losing interest. Go to 83",
-					"page"     : 83,
+					"page"     : "83",
 					"roll"     : [1,2,3,4,5,6]
 				}
 			],
 			"die" : true
 		},
-		{
+		"39" : {
 			"copy"    : "There is a heavily clawed mannequin in the opposite corner, and a low, menacing growl from a platform above the door.",
 			"number" : 39,
 			"options" : [
 				{
 					"copy"        : "Go to 85",
-					"page"     : 85
+					"page"     : "85"
 					
 				}
 			]
 		},
-		{
+		"40" : {
 			"copy"    : "The tiger stops in its tracks and looks from side to side, as if to see if anybody is watching. Then it rolls on its back and starts making purring sounds.",
 			"number" : 40,
 			"options" : [
 				{
 					"copy"        : "Do you go over and scratch its stomach? Go to 5",
-					"page"     : 5
+					"page"     : "5"
 					
 				},
 				{
 					"copy"        : "Or run like a million zephyrs (windily) to the other door? Go to 63",
-					"page"     : 63
+					"page"     : "63"
 					
 				}
 			]
 		},
-		{
+		"41" : {
 			"copy"    : "This street really stinks. Rotten fish guts, rotten gutfish, and people who smell like they died at sea several years ago—and look like they died several centuries ago. You hurry through, with a fold of your cloak stuffed up each nos-tril—all the fashion in the Street of Fishmongers. Toward the end of the street, a porcelain model of a toadfish points toward Fishgut Alley, and a statue of a naked mermaid (with rotating flukes) beckons toward the Place of Plaice.",
 			"number" : 41,
 			"options" : [
 				{
 					"copy"        : "If you walk toward Fishgut Alley, Go to 12",
-					"page"     : 12
+					"page"     : "12"
 					
 				},
 				{
 					"copy"        : "If you stroll toward the Place of Plaice, Go to 83",
-					"page"     : 83
+					"page"     : "83"
 					
 				}
 			]
 		},
-		{
+		"42" : {
 			"copy"    : "As you say “No thanks,” the agent&#8217;s forked tail and horns break out of his pin-striped suit. He draws a pitchfork from his shoulder holster . . . just a little too late. There is a flash of blue lightning, and the “Choose Your Own Adventure” agent is now no more than a patch of oily scum. A white-suited man strolls up, the gold wings on his breast pocket gleaming in the sun. He blows the smoke from a magnum pen and slips it back into his pocket. “Get on with it,” he says. “Finish up—I need the money.”",
 			"number" : 42,
 			"options" : [
 				{
 					"copy"        : "You nod and head south. Go to 54",
-					"page"     : 54
+					"page"     : "54"
 					
 				}
 			]
 		},
-		{
+		"43" : {
 			"copy"    : "As the tiger leaps, you draw your pistol in one smooth motion, wind the wheel lock faster than a speeding bullock cart, prime it quicker than a flash of lightning, aim, and . . . Roll one die.",
 			"number" : 43,
 			"options" : [
 				{
 					"copy"        : "Congratulations. All these frantic motions have hypnotized the tiger. It is staring at you, its eyes great circles of disbelief. This puts you off, so you don&#8217;t fire but edge past to the other door. Go to 79",
-					"page"     : 79,
+					"page"     : "79",
 					"roll"     : [1,2,3]
 				},
 				{
 					"copy"        : "It springs on you before you can fire, so you have to do all the winding, priming, and so forth at the same time as being savagely mauled by a four-hundred-pound Bengal tiger! It&#8217;s lucky you&#8217;re a hero—you fire, the tiger dies, and you get to live out the rest of your tragic life with the terrible scars the tiger has inflicted. You staunch the blood where your little finger is bleeding, and eye the scratch marks with depression. Absolutely bound to scar, you think sadly, as you head for the other door. Go to 79",
-					"page"     : 79,
+					"page"     : "79",
 					"roll"     : [4,5,6]
 				}
 			],
 			"die" : true
 		},
-		{
+		"44" : {
 			"copy"    : "You open the door of the Salon, enter, and quickly close it behind you. It is very dim inside, and your eyes take several seconds to adjust. There is a sort of snuffling sound in one corner, and you start to draw your rapier before you realize it is . . . seductive breathing. Your eyes adjusted, you see the fabled courtesan Yvette lying on a couch, her fishnet stockings gleaming against the red plush. She languidly stretches out one slim arm and beckons to you.",
 			"number" : 44,
 			"options" : [
 				{
 					"copy"        : "Do you abandon your mission, shout, “Every man for himself,” and fling yourself upon her? Go to 67",
-					"page"     : 67
+					"page"     : "67"
 					
 				},
 				{
 					"copy"        : "Allow her to seduce you, pay her, then resume your search for your true love? Go to 53",
-					"page"     : 53
+					"page"     : "53"
 				},
 				{
 					"copy"        : "Call on Sir Galahad, the Pure Knight, to help you fight temptation? Go to 71",
-					"page"     : 71
+					"page"     : "71"
 				}
 			]
 		},
-		{
+		"45" : {
 			"copy"    : "You turn back toward the Southgate. Lightning flashes across the sky. Thunder resounds throughout the postern tunnel in which you are sheltering from falling albatrosses. An ancient mariner appears and shoots you with his crossbow. The last words you hear are the senile old fool saying: “That&#8217;s funny. I could have sworn it was an albatross. Must have been the lightning. . . .” The End.",
 			"number" : 45,
 			"end"     : true
 		},
-		{
+		"46" : {
 			"copy"    : "The Bittern approaches and circles lazily, just out of reach of your rapier. You think you&#8217;ve got it beat and start to edge across the square. At that precise second the Bittern strikes, jabbing you savagely in the left buttock. Shrieking, you run across the square, hand clamped to your backside to guard against the infamous second strike.",
 			"number" : 46,
 			"options" : [
 				{
 					"copy"        : "Go to 93",
-					"page"     : 93
+					"page"     : "93"
 				}
 			]
 		},
-		{
+		"47" : {
 			"copy"    : "You slam the door behind you and brace yourself against it as the tremendous bulk of the eunuch slams against it.",
 			"number" : 47,
 			"options" : [
 				{
 					"copy"        : "Do you wait for him to charge again, then let the door fly open? Go to 75",
-					"page"     : 75
+					"page"     : "75"
 				},
 				{
 					"copy"         : "Or fire your pistol (if you have one) through the door? Go to 87",
-					"page"      : 87,
+					"page"      : "87",
 					"equipment" : ["pistol"],
 					"equipmentState"   : "any"
 					
 				}
 			]
 		},
-		{
+		"48" : {
 			"copy"    : "You start sweeping the halberd viciously back and forth like some sort of deranged lawn mower—but this only makes the giant man angry. His shirt splits up the back, his eyes and muscles bulge, and he puts on a pair of glasses. You stare aghast as he grabs the swinging halberd and breaks it into several pieces, then advances upon you with a particularly sharp splinter, grinning inanely . . . but this is all a product of your fevered imagination. You shouldn&#8217;t swing that halberd so vigorously! Actually, he ran away as soon as you got the halberd out.",
 			"number" : 48,
 			"options" : [
 				{
 					"copy"        : "Go to 95",
-					"page"     : 95
+					"page"     : "95"
 				}
 			]
 		},
-		{
+		"49" : {
 			"copy"    : "Hampered by the body, the hag fails to intercept you. She howls abuse as you speed past, through the door, up the stairs, and out.",
 			"number" : 49,
 			"options" : [
 				{
 					"copy"        : "Go to 79",
-					"page"     : 79
+					"page"     : "79"
 				}
 			]
 		},
-		{
+		"50" : {
 			"copy"    : "“Ullo, ullo, ullo,” says the Sergeant of the Watch. “Wot &#8217;ave we &#8217;ere then, sunshine? Is that an &#8217;alberd sticking up out of your cloak?” Do you—",
 			"number" : 50,
 			"options" : [
 				{
 					"copy"         : "Say “No, it&#8217;s a five-pronged fish spear”? Go to 25",
-					"page"      : 25,
+					"page"      : "25",
 					"equipment" :  ["spear"],
 					"equipmentState"   : "any"
 					
 				},
 				{
 					"copy"        : "Say “Yes, I am going to visit my mother-in-law”? Go to 72",
-					"page"     : 72
+					"page"     : "72"
 				},
 				{
 					"copy"        : "Say “Take that, garboil!” and attack? Go to 65",
-					"page"     : 65
+					"page"     : "65"
 				}
 			]
 		},
-		{
+		"51" : {
 			"copy"    : "You lose your grip as you fumble one-handed for the saint, and you begin to fall. Fortunately, your shining white heroic teeth manage to clench on the sail. You pray for a miracle (silently), but the effort is too much. You drop the plaster saint and grab the sail. The saint falls on the hunchback&#8217;s head; he looks up and and activates the windmill again. You descend gracefully, land with elan, and cross yourself. The hunchback head butts you in a very sensitive region (he couldn&#8217;t reach higher) and drops a pile of plaster shards on your doubled-up form. You hobble away, groaning.",
 			"number" : 51,
 			"options" : [
 				{
 					"copy"      : "Go to 54",
-					"page"      : 54
+					"page"      : "54"
 				}
 			]
 		},
-		{
+		"52" : {
 			"copy"    : "A grim complex of towers, barbicans, murder holes, and dungeons, the Southgate Fortress was transformed into an amusement arcade several years ago. Now, from the Wheel of Fortune to the Headless Ventriloquist, you&#8217;ll find fun at the Southgate. Only twenty bezants for the whole family— forty if you don&#8217;t want the kids back at the end of the day . . . but this is all meaningless hype to you. Your mind is set on rescuing the fair lady. . . what was her name . . . Oiseaux. You ignore the Southgate, and go",
 			"number" : 52,
 			"options" : [
 				{
 					"copy"         : "South (sort of). Go to 16",
-					"page"      : 16
+					"page"      : "16"
 				},
 				{
 					"copy"         : "Sort of east. Go to 88",
-					"page"      : 88
+					"page"      : "88"
 				}
 			]
 		},
-		{
+		"53" : {
 			"copy"    : "Nice try, but it&#8217;s money up front at the Quay of Scented Rats. As you cannot possibly have the hundred bezants Yvette demands, she rings a little bell. Moments later, an enormous eunuch servant appears and escorts you back to the Main Hall of the bordello.",
 			"number" : 53,
 			"options" : [
 				{
 					"copy"         : "Go to 61",
-					"page"      : 61
+					"page"      : "61"
 				}
 			]
 		},
-		{
+		"54" : {
 			"copy"    : "Quay of Scented Rats (Landward Side) At last you have reached the Sleine! You can&#8217;t see it through the ramshackle warehouses and wharves, but that odor of muddy decay and raw sewage could only be the river. On the other side of the warehouses, you can just see a ramshackle bridge and the hundred lanterns that spell out “S en ed R ts” (there should be a hundred forty lanterns). Loosening your rapier in its scabbard, you stride on.",
 			"number" : 54,
 			"options" : [
 				{
 					"copy"         : "Go to 7",
-					"page"      : 7
+					"page"      : "7"
 				}
 			]
 		},
-		{
+		"55" : {
 			"copy"    : "The guards take your bezants with suspicion, subject them to their beaverlike teeth, then reluctantly stamp the back of your hand with today&#8217;s date and the scented rat symbol of the bordello. They let you pass onto the rickety bridge, and warn you not to approach the old troll who lives underneath. You cross the bridge speedily and enter...the Quay of Scented Rats.",
 			"number" : 55,
 			"options" : [
 				{
 					"copy"         : "Go to 61",
-					"page"      : 61
+					"page"      : "61"
 				}
 			]
 		},
-		{
+		"56" : {
 			"copy"    : "Roll one die.",
 			"number" : 56,
 			"options" : [
 				{
 					"copy"        : "You&#8217;re running full tilt when you realize you can no longer hear the Bittern. You slow, look around, and see that it has gone into whisper mode, gliding along and again...and it strikes you savagely in the balls. You can&#8217;t believe how lucky that was...you hardly ever carry tennis balls around in your pockets. Lucky you were planning to have a game this morning. Relieved, you put on speed. Go to 93",
-					"page"     : 93,
+					"page"     : "93",
 					"roll"     : [1,2,3]
 				},
 				{
 					"copy"        : "You cross the square miles ahead of the Bittern— which, in fact, turns out to be a harmless Tittern. Very similar, but the Tittern&#8217;s beak is nonrigid, and the feathers on the back of its neck are more golden, and have a barred pattern. Its feeding habits are also markedly different, particularly on Wednesdays, when the Tittern is a familiar sight at the kitchen doors of many fashionable restaurants, pecking at paté de fois gras and trying to get the dregs out of champagne bottles. It is here that the Tittern&#8217;s remarkable flexible beak comes into its own. A Tittern found trapped in a bottle of Pom Derryong &#8217;47 had a beak seven inches long (extended), and three inches long when rolled up on top of its head . . . but you have no time for ornithological observations. On to 93 ",
-					"page"     : 93,
+					"page"     : "93",
 					"roll"     : [4,5,6]
 				}
 			],
 			"die" : true
 		},
-		{
+		"57" : {
 			"copy"    : "You approach the hulking giant. Close up, you see that he has a greenish tinge—but then the smell of this place is enough to make anyone sick. “Excuse me, peasant,” you say nicely. “Point me to the River Sleine and be damned quick about it.” He growls, burps, and raises his club to attack.",
 			"number" : 57,
 			"options" : [
 				{
 					"copy"         : "Do you run back to the Place of Plaice? Go to 83",
-					"page"      : 83
+					"page"      : "83"
 				},
 				{
 					"copy"         : "Calmly fix him with your steely gaze, poke your tongue out, and finish him off with a single lunge? Go to 28",
-					"page"      : 28
+					"page"      : "28"
 				},
 				{
 					"copy"         : "Back off and look for an opening? Go to 38",
-					"page"      : 38
+					"page"      : "38"
 				},
 				{
 					"copy"         : "Get out your halberd (if you have one) and go for his kneecaps? Go to 48",
-					"page"      : 48,
+					"page"      : "48",
 					"equipment" : ["halberd"],
 					"equipmentState"   : "any"
 					
 				}
 			]
 		},
-		{
+		"58" : {
 			"copy"    : "You drop down a long chute, accelerating through several twists and curves, then explode out into a dimly lit room. A cackling old hag is lifting a body from another chute, a huge, evil-smelling pot is bubbling on a central stove, there are pastry pie shells laid out on the table, and a big autographed picture of a nasty-looking barber is in the corner.",
 			"number" : 58,
 			"options" : [
 				{
 					"copy"         : "Do you run for the door? Go to 49",
-					"page"      : 49
+					"page"      : "49"
 				},
 				{
 					"copy"         : "Try and climb back up the chute? Go to 78",
-					"page"      : 78
+					"page"      : "78"
 				},
 				{
 					"copy"         : "Attack the hag with your rapier? Go to 13",
-					"page"      : 13
+					"page"      : "13"
 				}
 			]
 		},
-		{
+		"59" : {
 			"copy"    : "Heading north by northwest, you arrive in Ma&#8217;s Field—a small patch of greenery, where many aged women farm market gardens. At the other end of the field, a resplendent red-and-gold Montgolfier is drifting along, with a man throwing primitive fertilizer over the side—it is obviously one of those new-fangled crop-dusting balloons. It drifts closer, and the occupant seems to take an interest in you.",
 			"number" : 59,
 			"options" : [
 				{
 					"copy"         : "Do you run away toward the Carved Heads of Past Emperors? Go to 31",
-					"page"      : 31
+					"page"      : "31"
 				},
 				{
 					"copy"         : "Stand there like a ninny? Go to 22",
-					"page"      : 22
+					"page"      : "22"
 				}
 			]
 		},
-		{
+		"60" : {
 			"copy"    : "You hold the piece of paper to the light from the window—or you would, if the window were there. You stare around the solid, windowless walls, and then back to the paper. In the dim, unearthly light, you see it is an invitation—an invitation to “spend the rest of your days in Monsieur Moorcock&#8217;s Mill of Mazes.” You sigh heavily and open the nearest trapdoor. Why, oh why, you ask yourself, is there a maze in every adventure?",
 			"number" : 60,
 			"options" : [
 				{
 					"copy"         : "Go to 3",
-					"page"      : 3
+					"page"      : "3"
 				}
 			]
 		},
-		{
+		"61" : {
 			"copy"    : "You enter the Great Hall of the Quay of Scented Rats and are stricken with awe! The basilica of St. Peter&#8217;s, the Hanging Gardens of Babylon, the Fabled City of Gold—they cannot compare ...as they are farmore awe-inspiring.But the Great Hall is a splendid exhibition of bad taste. Purple fur lines the walls and floor, growing like some sort of fungus between the huge plaster sculptures of Aphrodite and Eros. Glass Cupids swing on chains of worn silver-plated steel and tangle in the papier-mâché ferns. Red plush couches line the walls, where gentlemen and lady customers leaf through the catalogues of men and women of ill repute and an old madam constantly sprays the lot with gallons of cheap scent from a mammoth atomizer.",
 			"number" : 61,
 			"options" : [
 				{
 					"copy"         : "Do you stride through the Hall and out the door at the other end? Go to 44",
-					"page"      : 44
+					"page"      : "44"
 				},
 				{
 					"copy"         : "Or stride through the Hall and out the door at the other end, feeling as if your life is somehow being manipulated by unearthly powers? Go to 44",
-					"page"      : 44
+					"page"      : "44"
 				}
 			]
 		},
-		{
+		"62" : {
 			"copy"    : "You draw your rapier, expecting certain death at the monstrously skilled hands of a Cleaver Fu Master. But the hag is strangely motionless, and you realize that by some quirk of fate, you will be spared. You edge past the hag and out the door.",
 			"number" : 62,
 			"options" : [
 				{
 					"copy"         : "Go to 79 (Please note: Only one quirk of fate allowed per adventure.)",
-					"page"      : 79
+					"page"      : "79"
 				}
 			]
 		},
-		{
+		"63" : {
 			"copy"    : "You pass the tiger in an adrenalin-assisted blur. Obviously it was just trying to lull you into a false sense of security, because it leaps at you, snarling, as you pass. You wrench the other door open and fall out into the street, babbling, “Nice Mr. Tiger. Nice Tiger, don&#8217;t bite. I give to the World Wildlife Fund. Sixty bezants every full moon. At least I will. Starting next year. Honest, Mr. Tiger . . .” You stop babbling as you realize the door has swung shut behind you.",
 			"number" : 63,
 			"options" : [
 				{
 					"copy"         : "Go to 79 (Please note: Only one quirk of fate allowed per adventure.)",
-					"page"      : 79
+					"page"      : "79"
 				}
 			]
 		},
-		{
+		"64" : {
 			"copy"    : "As your boat makes its closest approach to the houseboat, you leap from its prow! Roll one die.",
 			"number" : 64,
 			"options" : [
 				{
 					"copy"        : "Splosh! You manage to perform one and a half somersaults before entering the Sleine at an obtuse angle. Various courtesans, gigolos, and guests come to the rail of the houseboat and laugh as you are dragged away by the current, thrashing and cursing. Mortally embarrassed, you decide to sink to the bottom of the Sleine and end it all. However, when you do sink to the bottom, it is so disgusting that you change your mind and swim ashore. Go to 7",
-					"page"     : 7,
+					"page"     : "7",
 					"roll"     : [1,2]
 				},
 				{
 					"copy"        : "As you leap, you wisely decide to dispense with the somersaults, and your leap carries you to the prow of the houseboat, where you cling for dear life. You prepare for another leap onto the deck, but that last one really took it out of you, so you slither under the rails and crawl across the deck instead. Go to 44",
-					"page"     : 44,
+					"page"     : "44",
 					"roll"     : [4,5]
 				},
 				{
 					"copy"        : "You hurtle eighteen feet into the air, do three full somersaults, flourish your hat, and land on the deck in front of several guests of the establishment. Astounded, they can merely gasp as you calmly light a cigarillo and stride toward the Salon door. Go to 44",
-					"page"     : 44,
+					"page"     : "44",
 					"roll"     : [6]
 				}
 			],
 			"die" : true
 		},
-		{
+		"65" : {
 			"copy"    : "As you struggle to get the halberd out from under your cloak, the Sergeant steps back, and all four Watchmen lower their blunderbusses and fire. Your last thought before you shuffle off this mortal coil is whether you left the mulled wine on the fire. Maybe it&#8217;s boiled dry....",
 			"number" : 65,
 			"end"     : true
 		},
-		{
+		"66" : {
 			"copy"    : "You treacherous little worm! Okay—leave Lady Oiseaux to the tender mercies of a desert chieftain. Don&#8217;t sample the delights of the Quay of Scented Rats or . . . or . . . words fail me. I hope you get a part as Minotaur bait in “Theseus Does Knossos: Choose Your Own Adventure 288.” And you can leave the El Superbeau cognac behind.",
 			"number" : 66,
 			"end"     : true
 		},
-		{
+		"67" : {
 			"copy"    : "You fling yourself toward the lovely Yvette, only to be met by an upraised knee. You bounce back, whimpering, and she calmly rings a little bell. An enormous eunuch servant enters, giggles, and picks you up. “A new recruit for uth, Mithtreth,” he lisps. She smiles, and you are carried away, still whimpering.",
 			"number" : 67,
 			"options" : [
 				{
 					"copy"         : "Go to 90",
-					"page"      : 90
+					"page"      : "90"
 				}
 			]
 		},
-		{
+		"68" : {
 			"copy"    : "Failure! You go for the trip, but the eunuch isn&#8217;t as slow as he looks! In the blink of an eye, he has you in a half nelson! You struggle uselessly in the eunuch&#8217;s deceptively strong grasp. The doctor snaps open his gladstone bag, pulls out a pair of shears, and grins evilly. Suddenly, adrenalin you never knew you had shoots through every muscle in your body, transforming you into someone who makes Arnie Schwarzenegger look like a wimp. Roaring with berserk fury, you pick the three-hundred-pound eunuch up over your head and throw him at the doctor, before smashing through the wall into an adjoining room.",
 			"number" : 68,
 			"options" : [
 				{
 					"copy"         : "Go to 74",
-					"page"      : 74
+					"page"      : "74"
 				}
 			]
 		},
-		{
+		"69" : {
 			"copy"    : "“I demand twenty bezants for my ruined clothes, you ghastly lump of lard!” you cry indignantly at the merchant. He rubs his hands together obsequiously, offers four trillion billion humble pardons, and begins to bargain with you. Five minutes later, you leave without the bezants, but with your clothes replaced by a bright-blue one-piece sealskin body stocking with bronze buttons, which the merchant assures you will be the perfect disguise for the riverside slums. You walk toward the Arc de Trihump, glad that you got the better of the merchant.",
 			"number" : 69,
 			"options" : [
 				{
 					"copy"         : "Go to 99",
-					"page"      : 99,
+					"page"      : "99",
 					"effect"    : [{
 						"type"   : "inventory",
 						"action" : "add",
@@ -1110,101 +1108,104 @@
 				}
 			]
 		},
-		{
+		"70" : {
 			"copy"    : "Could you really be that stupid? You trip, recover, and just manage to grab hold of the trapdoor&#8217;s iron ring—saving yourself from certain death. Shaking with relief, you crawl back and pick up the piece of paper.",
 			"number" : 70,
 			"options" : [
 				{
 					"copy"         : "Go to 60",
-					"page"      : 60
+					"page"      : "60"
 				}
 			]
 		},
-		{
+		"71" : {
 			"copy"    : "You cry out: “Sir Galahad, come to my aid!” Suddenly, a white light fills the room, there is an explosion of white petals, a miniature snowstorm hurtles past, and there is the knelling of a great bell. A man appears and bows. He is six feet six inches tall, incredibly handsome, and has a smile that blinds at thirty paces. It can only be . . . Sir Galahad! He takes one look at Yvette (who sits up and puts on her Ray-Bans), and says, “Right! I&#8217;ll take care of this one!” Yvette says, “Yes please!” and you exit, with the slight suspicion that Galahad might not be as pure as everyone thought. Then you see him getting his prayer book out and pointing to a particular illustrated psalm, so you know he will reform the fallen woman. You open the other door and dash through it, in search of Lady Oiseaux!",
 			"number" : 71,
 			"options" : [
 				{
 					"copy"         : "Go to 15",
-					"page"      : 15
+					"page"      : "15"
 				}
 			]
 		},
-		{
+		"72" : {
 			"copy"    : "The Sergeant raises his eyebrows for a moment, then waves you on. You walk past, down to the Street of Fishmongers, which marks the beginning of the Scum Quarter. Behind you, the Watch are discussing halberds and, possibly, mothers-in-law. “Of course, you&#8217;ve got to get in with an overhand.. . .” “Nah, what you do is get one with a six-foot handle.. . .”",
 			"number" : 72,
 			"options" : [
 				{
 					"copy"         : "Go to 41",
-					"page"      : 41
+					"page"      : "41"
 				}
 			]
 		},
-		{
+		"73" : {
 			"copy"    : "There&#8217;s no point beating about the bush on this one. I&#8217;ll tell it to you straight, without circumlocution, shilly-shallying, or avoiding the subject. It&#8217;s bad news, but what isn&#8217;t these days? What with the price of El Superbeau up to four hundred bezants the tun, the king frolicking in orange orchards, the country going to the dogs . . . it&#8217;s all bad news. Oh yes . . . Z——O kills you. Right through the heart. T h o c k !A n d it&#8217;s all over . . . and you were so close to success. . ..",
 			"number" : 73,
 			"end"     : true
 		},
-		{
+		"74" : {
 			"copy"    : "You hear the groans and moans of the eunuch and the doctor on the other side of the splintered wall. Dimly, you hear your brain telling you this is going to really hurt later. There is another door.",
 			"number" : 74,
 			"options" : [
 				{
 					"copy"         : "Do you wrench open the other door? Go to 80",
-					"page"      : 80
+					"page"      : "80"
 				},
 				{
 					"copy"         : "Or take advantage of your berserk strength to smash through the adjacent wall? Go to 93",
-					"page"      : 93
+					"page"      : "93"
 				}
 			]
 		},
-		{
+		"75" : {
 			"copy"    : "You hear the eunuch backing off, then galumphing forward to batter the door. You fling it open and step aside, as a huge blubbery mass hurtles past and smashes against the other door. The doctor, seeing his protector lying unconscious on the floor, begs for mercy. “Where are the auction goods?” you ask sternly. Shaking, he points at the door marked “Not the Auction Goods.” You nod and continue to stare at him. The slight smile you learned from Clint Eastwood creeps across your face, and you take the shears from his nerveless fingers and click them twice. He looks aghast and faints. You use the shears to trim the end of your Van Dyke beard, then go to the other door, stepping on the unconscious eunuch.",
 			"number" : 75,
 			"options" : [
 				{
 					"copy"         : "Go to 80",
-					"page"      : 80
+					"page"      : "80"
 				}
 			]
 		},
-		{
+		"76" : {
 			"copy"    : "Roll one die for a highly realistic resolution of this situation.",
 			"number" : 76,
 			"options" : [
 				{
 					"copy"        : "He doesn&#8217;t start laughing. Your eyes clouded with forced tears, and mind numbed by the effort of concentrated blubbering, you hardly notice his rapier has cut you from your guggle to your zatch (don&#8217;t ask). You blubber for real . . . then it is all over. Your last thoughts are of the stupid guidebook that said this dopey maneuver never failed. The End.",
-					"end"      : true,
 					"roll"     : [1,2,3]
 				},
 				{
 					"copy"        : "He guffaws. He nearly chokes with laughter. His eyes pop out of his head. Before you can even draw your pistol, he&#8217;s lying on the ground, kicking his legs and giggling inanely. You stop blubbering and continue on your way. Go to 52",
-					"page"     : 52,
+					"page"     : "52",
 					"roll"     : [4,5,6]
 				}
 			],
-			"die" : true
+			"die" : true,
+			"end": true
 		},
-		{
+		"77" : {
 			"copy"    : "If you don&#8217;t have a fish spear, your head is bashed in by the ex-priest. Tempus has fugited. The End. That&#8217;s it. If you do have a fish spear, roll one die.",
 			"number" : 77,
 			"options" : [
 				{
-					"copy"        : "Your spear is longer than the ex-priest&#8217;s thurible. He is pronged several times before retreating.",
+					"copy"        : "Your spear is longer than the ex-priest&#8217;s thurible. He is pronged several times before retreating. You return to the Arc de Trihump. Go to 99",
+					"page"      : "99",
 					"roll"      : [1,2,3],
 					"equipment" : ["spear"],
 					"equipmentState"   : "any"
 					
 				},
 				{
-					"copy"        : "You entangle the thurible&#8217;s chain in your prongs and whip it away. Bereft of his weapon, the defrocked clergyman retires to contemplate the infinite.",
+					"copy"        : "You entangle the thurible&#8217;s chain in your prongs and whip it away. Bereft of his weapon, the defrocked clergyman retires to contemplate the infinite. You return to the Arc de Trihump. Go to 99",
+					"page"      : "99",
 					"roll"      : [4,5],
 					"equipment" : ["spear"],
 					"equipmentState"   : "any"
 				},
 				{
-					"copy"        : "You trip; the thuribler hits you with his thurible. It doesn&#8217;t hurt that much, but the incense makes you feel sick. He steals your fish spear.",
+					"copy"        : "You trip; the thuribler hits you with his thurible. It doesn&#8217;t hurt that much, but the incense makes you feel sick. He steals your fish spear. You return to the Arc de Trihump. Go to 99",
+					"page"      : "99",
 					"roll"      : [6],
 					"equipment" : ["spear"],
 					"equipmentState"   : "any",
@@ -1213,143 +1214,137 @@
 						"action" : "remove",
 						"item" : "spear"
 					}]
-				},
-				{
-					"copy"         : "Unless you are deceased, you return to the Arc de Trihump. Go to 99",
-					"page"      : 99,
-					"equipment" : ["spear"],
-					"equipmentState"   : "any"
 				}
 			],
 			"die" : true,
 			"end" : true
 		},
-		{
+		"78" : {
 			"copy"    : "You try to climb back up the chute, but it is too steep. From behind you comes the sound of a body being tipped into the pot. You turn, and the hag is advancing upon you brandishing a cleaver. Your stomach churns as you realize that she is wearing the Black Apron of a Master of Cleaver-Fu. ",
 			"number" : 78,
 			"options" : [
 				{
 					"copy"         : "Do you have two pairs of silk stockings? Go to 32",
-					"page"      : 32,
+					"page"      : "32",
 					"equipment" : ["stockings"],
 					"equipmentState"   : "any"
 
 				},
 				{
 					"copy"         : "Or a bottle of Opossum perfume? Go to 10",
-					"page"      : 10,
+					"page"      : "10",
 					"equipment" :["perfume"],
 					"equipmentState"   : "any"
 				},
 				{
 					"copy"         : "Or will you draw your rapier and try and fight your way past? Go to 62",
-					"page"      : 62
+					"page"      : "62"
 				}
 			]
 		},
-		{
+		"79" : {
 			"copy"    : "Once again, you stand outside the mill. A hunchback looks at you curiously, then wanders off, muttering, “She gave me water. I ordered wine.. . .”",
 			"number" : 79,
 			"options" : [
 				{
 					"copy"         : "You may go north by northwest. Go to 59",
-					"page"      : 59
+					"page"      : "59"
 				},
 				{
 					"copy"         : "Or south by southwest. Go to 54",
-					"page"      : 54
+					"page"      : "54"
 				}
 			]
 		},
-		{
+		"80" : {
 			"copy"    : "You wrench open the door, and there before you is a great gate of bronze, studded with rubies and emeralds. In front of the gate stands a mighty Djinn, clutching a scimitar of mirrored steel in a fist of Herculean proportions . . . oops, that&#8217;s “Down to the Sleazy Sandpits of Samarkand,” Adventure 31 in this series. Actually... You wrench open the door, revealing an antechamber. There is another door, marked “Secret—The Real Auction Goods.” You step into the room, and the door swings shut behind you with an audible click that certainly means it is now automatically locked. A man steps out of the shadows, brandishing a rapier. You have only a moment to take in his black hat, black mask, black shirt, black trousers, black boots, black cape, “Z” signet ring, and stupid little mustache before he cries “En garde!”",
 			"number" : 80,
 			"options" : [
 				{
 					"copy"         : "Do you swear at him in Spanish and lug out your own rapier? Go to 24",
-					"page"      : 24
+					"page"      : "24"
 				},
 				{
 					"copy"         : "Whip out your glove puppet of Cyrano de Bergerac, entrance him with an impromptu display of puppet swordsmanship, then stick the puppet&#8217;s sword up his nose? Go to 19",
-					"page"      : 19,
+					"page"      : "19",
 					"equipment" : ["puppet"],
 					"equipmentState"   : "any"
 				},
 				{
 					"copy"         : "Say, “Violence is the last resort of the incompetent, you childish fellow!” and attempt to walk past? Go to 86",
-					"page"      : 86
+					"page"      : "86"
 				}
 			]
 		},
-		{
+		"81" : {
 			"copy"    : "This was originally a brilliant paragraph detailing a combat with an enraged Purple-Assed Baboon. However, when Adventure 46, “Down to the Chlorophyllic Jungle,” ran short, it had to go over to it. Also, if you are reading this, you must be cheating.",
 			"number" : 81
 		},
-		{
+		"82" : {
 			"copy"    : "Eighty-two was also a brilliant paragraph, describing the awesome Slime Serpent that was going to emerge from the Sleine at a strategic moment. Once again, that paragraph had to go over to “Down to the Chlorophyllic Jungle.” Honestly, I don&#8217;t know how Steve Jackson and Ian Livingstone do it. They must be good with numbers or something.. . .",
 			"number" : 82
 		},
-		{
+		"83" : {
 			"copy"    : "This is the upmarket part of the Street of Fishmongers—a pleasant, open area, strewn with rancid squid carcasses and buckets of prawns left out in the sun. Smiling merchants offer you slightly fresher wares. You walk through haughtily, oblivious to this crass busi-ness—when, without warning, a fat merchant emerges from behind a crate and knocks you down with his enormous silk-wound belly!",
 			"number" : 83,
 			"options" : [
 				{
 					"copy"         : "Do you leap up and stick the fellow with a convenient garfish? Go to 18",
-					"page"      : 18
+					"page"      : "18"
 				},
 				{
 					"copy"         : "Leap up and demand twenty bezants for the damage to your clothes? Go to 69",
-					"page"      : 69
+					"page"      : "69"
 				},
 				{
 					"copy"         : "Lie there and hope he doesn&#8217;t tread on you? Go to 98",
-					"page"      : 98
+					"page"      : "98"
 				}
 			]
 		},
-		{
+		"84" : {
 			"copy"    : "You grab hold of one of the windmill&#8217;s sails and are soon lifted high above the city. It is a somewhat tiring mode of sightseeing, but most educational. You have never seen the city&#8217;s dumps, ruins, broken sewers, and slums laid out in all their splendor before. As the sail reaches the top of its arc, a hunchback emerges from the mill below, says, “She gave me water,” and stops the sails. You are left dangling seventy feet above the ground, and your arms are getting tired.",
 			"number" : 84,
 			"options" : [
 				{
 					"copy"         : "Do you have twenty feet of rope? Go to 8",
-					"page"      : 8,
+					"page"      : "8",
 					"equipment" : ["rope"],
 					"equipmentState"   : "any"
 				},
 				{
 					"copy"         : "Or a plaster saint? Go to 51",
-					"page"      : 51,
+					"page"      : "51",
 					"equipment" : ["saint"],
 					"equipmentState"   : "any"
 				},
 				{
 					"copy"         : "If you have neither, Go to 37",
-					"page"      : 37
+					"page"      : "37"
 				}
 			]
 		},
-		{
+		"85" : {
 			"copy"    : "As you open the door, a fully grown Bengal tiger leaps down from above and advances, growling.",
 			"number" : 85,
 			"options" : [
 				{
 					"copy"         : "Do you run back through the door? Go to 9",
-					"page"      : 9
+					"page"      : "9"
 				},
 				{
 					"copy"         : "Shoot it with your pistol (if you have one)? Go to 43",
-					"page"      : 43,
+					"page"      : "43",
 					"equipment" : ["pistol"],
 					"equipmentState"   : "any"
 				},
 				{
 					"copy"         : "Say “Nice pussums” and head for the door opposite, marked EXIT? Go to 40",
-					"page"      : 40
+					"page"      : "40"
 				}
 			]
 		},
-		{
+		"86" : {
 			"copy"    : "Z looks surprised, then a grin slowly spreads across his face. “You are right!” he exclaims. “But I canot let you pass unless you overmaster me in a contest of some kind. Mmmm. . . how about a riddle game?” Reluctantly, you accept. It&#8217;s been a long time since you read The Hobbit, and you never did know why that stupid chicken crossed the road. He asks: “Take a span of mortal life, less a score times two Add a number equal to a witch&#8217;s coven thrice Less the year, but not the century, of the most famous gold rush in America.” You mutter something about rhyming, but desist when he absentmindedly cuts the wings from a passing fly with his rapier.",
 			"number" : 86,
 			"options" : [
@@ -1359,117 +1354,117 @@
 				}
 			]
 		},
-		{
+		"87" : {
 			"copy"    : "You level your pistol at the door and fire point-blank. There is a deafening crash! Splinters fly everywhere, smoke billows out, and you curse, cough, and shriek in pain. You pick a few of the splinters out, then peek through the bullet hole in the door. There is no sign of the eunuch or the doctor, so you reload, kick the door in, and level your pistol at every corner of the room, screaming, “Hands up!” But these histrionics are wasted, as a quick glance out the window reveals the eunuch and the doctor being carried away by the swift currents of the Sleine, hotly pursued by the Slime Serpent of paragraph 82. You check out the room, but there are no other exits, or any sign of Lady Oiseaux. You go down the corridor to the door marked “Not the Auction Goods.”",
 			"number" : 87,
 			"options" : [
 				{
 					"copy"         : "Go to 80",
-					"page"      : 80
+					"page"      : "80"
 				}
 			]
 		},
-		{
+		"88" : {
 			"copy"    : "The Windmill In the middle of the city there is a field. In the middle of the field there is a windmill. There is no reason there should be a windmill here, except that it comes in handy for hooking people up during duels.",
 			"number" : 88,
 			"options" : [
 				{
 					"copy"         : "You may go north by northwest. Go to 59",
-					"page"      : 59
+					"page"      : "59"
 				},
 				{
 					"copy"         : "Or grab onto one of the sails of the windmill. Go to 84",
-					"page"      : 84
+					"page"      : "84"
 				}
 			]
 		},
-		{
+		"89" : {
 			"copy"    : "It&#8217;s hard to get a grip on a smooth chin that curves in instead of out. You are feebly struggling for a handhold when the Montgolfier lands and a pinstripe-suited man alights. He introduces himself as an agent for “Choose Your Own Adventures,” and offers you a part as the hero in a “serious” solo adventure.",
 			"number" : 89,
 			"options" : [
 				{
 					"copy"         : "Do you accept? Go to 66",
-					"page"      : 66
+					"page"      : "66"
 				},
 				{
 					"copy"         : "Do you politely refuse? Go to 42",
-					"page"      : 42
+					"page"      : "42"
 				}
 			]
 		},
-		{
+		"90" : {
 			"copy"    : "The eunuch carries you into a Turkish bath room, which is currently unoccupied. He dumps you on a bench, and you hear him disappear off into the steam, lisping, “I&#8217;ll jutht fetth the doctor to finith off.” You feel that waiting for the doctor would be imprudent, and you are feeling much better, so you creep back out the door.",
 			"number" : 90,
 			"options" : [
 				{
 					"copy"         : "Go to 15",
-					"page"      : 15
+					"page"      : "15"
 				}
 			]
 		},
-		{
+		"91" : {
 			"copy"    : "Bittern Square You know the old saying “Once Bittern, twice as painful the next time”? That saying comes from this square, where fearsomely accurate seabirds always beak you in the same place. You try and creep past, but ...ohno... you&#8217;ve trod on a stick near a Bittern&#8217;s nest. You hear the snap! of the twig, and then the fearsome wokkawokkawokkaof a fully beaked Bittern taking off.",
 			"number" : 91,
 			"options" : [
 				{
 					"copy"         : "Do you stand there, waving your rapier over your head? Go to 46",
-					"page"      : 46
+					"page"      : "46"
 				},
 				{
 					"copy"         : "Or run like blazes for the narrow alley on the other side of the square? Go to 56",
-					"page"      : 56
+					"page"      : "56"
 				}
 			]
 		},
-		{
+		"92" : {
 			"copy"    : "Two women are playing cards around a small table. Two tigers are sleeping nearby. As you enter, the tigers leap up, growling.",
 			"number" : 92,
 			"options" : [
 				{
 					"copy"         : "Do you run back through the door? Go to 9",
-					"page"      : 9
+					"page"      : "9"
 				},
 				{
 					"copy"         : "Or pull up a chair and say, “Deal me in. What&#8217;s the game? Stud, draw, three-up two-down, écarte, vingt-et-un, snap, canasta, sudden death, gin rummy, five hundred, strip jack naked?” Go to 29",
-					"page"      : 29
+					"page"      : "29"
 				}
 			]
 		},
-		{
+		"93" : {
 			"copy"    : "Smack! Crash! Thud! Wallop! Bull-like, you smash through one ...two... three... four interior walls, leaving a trail of shrieking customers and their chosen consorts (not to mention splinters, broken furniture, embarrassment, etc.). This is fun! Smash! Crash! Splash! You fall into the Sleine and, drained by your berserk fury, dog-paddle ashore. You rest for a moment in the comfortable slime, moving on when it starts to grow on you. You head back to the main entrance of the Quay of Scented Rats.",
 			"number" : 93,
 			"options" : [
 				{
 					"copy"         : "Go to 7",
-					"page"      : 7
+					"page"      : "7"
 				}
 			]
 		},
-		{
+		"94" : {
 			"copy"    : "You&#8217;ve forgotten the door is locked. You back against it, knees knocking in fear, and mumble something about “Wrong room . . . sorry . . . I was looking for . . . ummm . . . eeerr . . .” He says, “Oh, that&#8217;s all right then. Thought you were after the auction goods. I&#8217;ll just get the key and let you out.” He sheathes his rapier and turns to a cabinet. You leap forward, swinging the rapier in your mouth, knock him out with the pommel, and make your smile three quarters of an inch wider. Before he has a chance to recover, you sprint across the room and open the other door.",
 			"number" : 94,
 			"options" : [
 				{
 					"copy"         : "Go to 100",
-					"page"      : 100
+					"page"      : "100"
 				}
 			]
 		},
-		{
+		"95" : {
 			"copy"    : "That&#8217;s the last of the hulking giant. You compose yourself (bandaging appendages where necessary), and continue on your way. Soon Fishgut Alley branches into a Y fork.",
 			"number" : 95,
 			"options" : [
 				{
 					"copy"         : "Do you go south (that must be south...)? Go to 88",
-					"page"      : 88
+					"page"      : "88"
 				},
 				{
 					"copy"         : "Or south, sort of west a bit? Go to 52",
-					"page"      : 52
+					"page"      : "52"
 				}
 			]
 		},
-		{
+		"96" : {
 			"copy"    : "The dragon rears back, its rainbow-scaled head writhing in agony as your sword sinks ever deeper into its primary brain. But the secondary brain still functions, and you see the great tail swinging around, the venomous sting preparing to punch through you where you stand, precariously balanced between the creature&#8217;s great yellow-centered eyes.",
 			"number" : 96,
 			"options" : [
@@ -1481,7 +1476,7 @@
 				}
 			]
 		},
-		{
+		"97" : {
 			"copy"    : "The tank glimmers with an unearthly light— surely this is the wellspring of the changelings, the nutrient tank where the Technomancer has been growing the nervous systems of his hideous creatures. You approach closer, scanning for search webs and tracksprings. Nothing shows in the visual spectrum, but the NecroVision™ sight shows stirrings beneath the floor. Forewarned, you spring back and draw your sword, a .45 caliber emulsion sprayer springing into your left fist, just as a Mordicant emerges through the flagstones, its gravemold arms writhing!<br><br>Paragraphs 96 and 97 are a blatant advertisement for “Dark Realm of the Technomancer,” which is at present little more than those two paragraphs. But that&#8217;s what advertising is all about. Order now!",
 			"number" : 97,
 			"options" : [
@@ -1493,38 +1488,38 @@
 				}
 			]
 		},
-		{
+		"98" : {
 			"copy"    : "aarghh! The pain is intense as the fat merchant rests his bulk upon you, in the mistaken belief that you are a convenient seat. Your screams of agony disconcert him—he leaps to his feet and hurries off. You slowly clamber to your knees and crawl toward the Arc de Trihump (or the other way). Subtract one from all future combat rolls due to a severely bruised back.",
 			"number" : 98,
 			"options" : [
 				{
 					"copy"         : "Go to 99",
-					"page"      : 99
+					"page"      : "99"
 				},
 				{
 					"copy"         : "Go to 91",
-					"page"      : 91
+					"page"      : "91"
 				}
 			]
 		},
-		{
+		"99" : {
 			"copy"    : "The Arc de Trihump A huge monument raised to celebrate the prowess of a long-dead emperor in his personal dealings with camels, the Arc de Trihump is near the Western Wall of the city.",
 			"number" : 99,
 			"options" : [
 				{
 					"copy"         : "If you continue west (or thereabouts): Go to 6",
-					"page"      : 6
+					"page"      : "6"
 				},
 				{
 					"copy"         : "Turn to the broad avenue that heads south: Go to 21",
-					"page"      : 21
+					"page"      : "21"
 				}
 			]
 		},
-		{
+		"100" : {
 			"copy"    : "You fling open the velvet-padded door and strike a commanding pose in the doorway. Your love, the Lady Oiseaux, is sitting by the mirror, putting on her earrings. She ignores you for a moment, then says: “If you&#8217;re coming in, come in. Ow! And help me with this earring. What took you so long anyway? You used to rescue me in no time at all—I guess you&#8217;re getting tired of me. No, don&#8217;t say you&#8217;re not. I know you are, otherwise you would have been here hours ago (sob).. . .” You stride across the room and stop her protests with a passionate kiss, sweep her into your arms, and leap out the window—onto the deck of a conveniently passing luxury wide-bodied gondola. The string quartet looks surprised, then breaks into the theme from Love Story. The waiter pops the champagne as you and your lady recline into the lavender-scented pillows, and the gondola gondols away into the setting sun, long life, and happiness ever after.*<br><br>*Hardened cynics may order the alternative, realistic, nonromantic ending (involving several hunchbacks, gruesome deeds, tragedy, and despair) by sending $2.00 to the author. ",
 			"number" : 100,
 			"end" : true
 		}
-	]
+	}
 }

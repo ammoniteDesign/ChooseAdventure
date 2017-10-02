@@ -1,49 +1,46 @@
 <h2>Down to the Scum Quarter</h2>
 <main *ngIf="phase === 0">
 	<p>Start Page</p>
-
 	<h3>Farcical Fantasy Solo Adventure</h3>
-
-
 	<h4>How to Play</h4>
 	<ol>
 		<li>
-			1. Decide whether you’re going to cheat or not. Most people cheat in solo adventures, even if they don’t admit it. If you’re not going to cheat, get a six-sided die.
+			Decide whether you’re going to cheat or not. Most people cheat in solo adventures, even if they don’t admit it. If you’re not going to cheat, get a six-sided die.
 		</li>
 		<li>
-			2. Go down to the local costume rental shop and get a Three Musketeers outfit. This is called “getting into character.”
+			Go down to the local costume rental shop and get a Three Musketeers outfit. This is called “getting into character.”
 		</li>
 		<li>
-			3. If you’re old enough, stop by the liquor store on the way back and pick up a few bottles of cheap red wine.
+			If you’re old enough, stop by the liquor store on the way back and pick up a few bottles of cheap red wine.
 		</li>
 		<li>
-			4. Rent a video of The Three Musketeers. Start watching it, and practice knocking the tops off the wine bottles with your plastic rapier. This is called “getting the atmosphere.”
+			Rent a video of The Three Musketeers. Start watching it, and practice knocking the tops off the wine bottles with your plastic rapier. This is called “getting the atmosphere.”
 		</li>
 		<li>
-			5. Give up after you break the rapier, and open a bottle with a corkscrew. Drink all of it.
+			Give up after you break the rapier, and open a bottle with a corkscrew. Drink all of it.
 		</li>
 		<li>
-			6. Read “The Prelude.”
+			Read “The Prelude.”
 		</li>
 		<li>
-			7. Select five items from the list of equipment (unless cheating,in which case you presume you always have exactly what you need).
+			Select five items from the list of equipment (unless cheating,in which case you presume you always have exactly what you need).
 		</li>
 		<li>
-			8. Go to “The Adventure Begins!”
+			Go to “The Adventure Begins!”
 		</li>
 		<li>
-			9. Carefully evaluate the situation, choose a course of action, and go to the paragraph indicated, rolling a die when necessary.
+			Carefully evaluate the situation, choose a course of action, and go to the paragraph indicated, rolling a die when necessary.
 		</li>
 	</ol>
-
 	<h4>The Simple Method:</h4>
 	<p>Get a 6-sided die, and ignore steps 2–5.</p>
-
-	<button (click)="startAdventure()">I am the soul of Honor</button><button (click)="startAdventure(true)">I am totally going to cheat</button>
+	<button (click)="startAdventure(false)">I am the soul of Honor</button><button (click)="startAdventure(true)">I am totally going to cheat</button>
 </main>
 <main *ngIf="phase === 1">
-	<p>Inventory Page</p>
-	<!-- TODO: Make Recative Form? -->
+	<h3>The Prelude</h3>
+	<article>
+		Your beautiful mistress, the Lady Oiseaux, has been kidnapped. There is only one slim clue that may lead you to her&#8212;a brief message, scrawled in pale-gold eye paint across the side of her hijacked palanquin: Oh! This is awful! I am being kidnapped! They are taking me to sell to a desert chieftain at an auction, which I think is going to take place at midnight somewhere near the river, and I'll miss the party tonight. And I was going to wear my new dress with the ruby chips sewn on cloth of gold, and the peacock feather fan from . . . Those few words, and the "For Sale" brochure you hold in your kid-gloved hand, lead you to suspect that Lady Oiseaux is being held at the infamous Quay of Scented Rats&#8212;a floating bordello now stuck in the mudflats of the River Sleine. Pausing only to slip your trusty rapier into its scabbard, you draw your cloak around you and erupt out into the shadows of the night&#8212;toward the Sleine&#8212;and the vicious, nasty, disgusting . . . (roll of drums) . . . Scum Quarter of the Old City! You walk a few yards with considerable bravado and then whip back to your townhouse. Only a complete fool would go down to the vicious, nasty, disgusting Scum Quarter without pistols and a dagger or two. Maybe you should call in on the lads at the Fencing Academy . . . but there's no time. Select five items from the following list before once again slinking out into the shadows of the night.. . .
+	</article>
 	<form *ngIf="hero.godMode === false" (ngSubmit)="setInventory()"> 
 		<p *ngFor="let inventoryItem of book.inventoryPage.inventoryChoices">
 			<input
@@ -59,10 +56,50 @@
 	</form>
 	<article *ngIf="hero.godMode === true">
 		<p>I am a god!</p>
-		<button>Let's go!</button>
+		<button (click)="setInventory()">Let's go!</button>
 	</article>
 </main>
+
+
 <main *ngIf="phase === 2">
 	<p>Book Page</p>
+	<article>{{currentPage.copy}}</article>
+	<div *ngIf="currentPage.options != undefined">
+		<button		
+			*ngFor="let option of currentPage.options" 
+			(click)="chooseOption(option)"
+			[disabled]="option.enabled != true" >
+			{{option.copy}}	
+
+			<!-- TODO: Bind an input if the page property is "input" -->
+		</button>
+	</div>
+
+	<!-- TODO: Figure Out how to refresh the entire thing... -->
+	<a *ngIf="currentPage.end" routerLink="/scum-quarter" routerLinkActive="active">Restart</a>
+
+	<aside *ngIf="!hero.godMode">
+		<p>Gold: {{hero.gold}}</p>
+		<dl>
+			<dt>Inventory</dt>
+			<dd *ngFor="let item of hero.inventory">{{item.display}}</dd>
+		</dl>
+		<div *ngIf="currentPage.die">
+			<button (click)="rollDie()">
+				{{currentPage.dieRoll}}
+			</button>
+			<p *ngIf="hero.rollModifier">+/- {{hero.rollEffect}} </p>
+		</div>
+
+	</aside>
+
+	<aside *ngIf="hero.godMode">
+		<p>Gold: ALL</p>
+		<dl>
+			<dt>Inventory</dt>
+			<dd>ALL</dd>
+		</dl>
+		<!-- TODO: Previous Page Next Page And Input Page -->
+	</aside>
 </main>
 <!--  -->

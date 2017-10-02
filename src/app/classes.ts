@@ -3,13 +3,14 @@ export class Hero {
 	inventory: InventoryItem[];
 	gold: number;
 	dieModifier: number;
+	location: number;
 	//moves: Moves;
 }
 
 
 export class Book {
 	inventoryPage: InventoryPage;
-	bookPages: Page[];
+	bookPages: BookPages;
 }
 
 
@@ -22,11 +23,15 @@ export class InventoryItem {
 	name: string;
 	type: string;
 	chosen : boolean;
-	
+
 	//Nullable
 	display: string;
 	imgUrl: string;
 	amount: number;
+}
+
+export class BookPages {
+	page: Page
 }
 
 export class Page {
@@ -38,19 +43,20 @@ export class Page {
 	//Nullable 
 	options: Option[]; //Null/Empyt
 	die: boolean; //False
+	dieRoll: number;
 	effect: Effect[]; //Null
 	gameOver: boolean; //False
 }
 
 export class Option {
-
 	//Must Haves
 	copy: string;
-	page: number;
+	enabled: boolean;
 
 	//Nullable
+	page: string;
 	roll: number[]; //Only if Page has die....
-	equipment: InventoryItem[]; //Null/Empty
+	equipment: string[]; //Null/Empty
 	equipmentState: string; //Nullable (options: any, none, all)
 	gold: number; //Nullable
 	effect: Effect[]; //Nullable
