@@ -1,33 +1,8 @@
-export class Hero {
-	godMode: boolean;
-	inventory: InventoryItem[];
-	gold: number;
-	dieModifier: number;
-	location: number;
-	//moves: Moves;
-}
-
+import {InventoryItem, InventoryPage} from './inventory';
 
 export class Book {
 	inventoryPage: InventoryPage;
 	bookPages: BookPages;
-}
-
-
-export class InventoryPage {
-	inventoryChoices: InventoryItem[];
-	amount : number;
-}
-
-export class InventoryItem {
-	name: string;
-	type: string;
-	chosen : boolean;
-
-	//Nullable
-	display: string;
-	imgUrl: string;
-	amount: number;
 }
 
 export class BookPages {

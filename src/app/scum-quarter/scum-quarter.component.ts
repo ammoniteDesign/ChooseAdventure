@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
-import {BookService} from './book.service';
-import {Book} from './classes';
-import {BookPages} from './classes';
-import {Hero} from './classes';
-import {InventoryItem} from './classes';
-import {Page} from './classes';
-import {Option} from './classes';
-import {Effect} from './classes';
+
+import {Book, BookPages, Page, Option, Effect } from '../classes/book';
+import {Hero} from '../classes/hero';
+import {InventoryItem} from '../classes/inventory';
+
+import { BookService } from '../services/book.service';
+import { FunctionService } from '../services/functions';
+
+//Child
+import { ScumQuarterStartComponent } from './scum-quarter-start.component';
 
 @Component({
   selector: 'scum-quarter',
-  templateUrl: './scum-quarter.component.html'
+  templateUrl: './scum-quarter.component.html',
+  providers: [BookService, FunctionService]
 })
 
 export class ScumQuarterComponent {
@@ -21,7 +24,9 @@ export class ScumQuarterComponent {
 	public hero = new Hero;
 	public phase = 0;
 
-	constructor(bookService: BookService) {
+	
+
+	constructor(bookService: BookService, functionService: FunctionService) {
 		this.hero.dieModifier = 0;
 		this.hero.godMode = false;
 		this.hero.gold = 0;
@@ -29,16 +34,20 @@ export class ScumQuarterComponent {
 		this.hero.location = 0;
 
 	    bookService.getBook('assets/js/ScumQuarter.json')
-	    	.then(response => this.book = response.json() as Book)
+	    	.then(response => this.book = response.json() as Book);
+
 	}
 
+
 	//TODO: These should be services...
-	startAdventure(isCheating: boolean){
-		if(isCheating){
-			this.hero.godMode = true;
-		}
-		this.phase++;
-	}
+// 	var startAdventure = (function(){
+//         console.log(this);
+//         // if(isCheating){
+//         //  //this.componentHero.godMode = true;
+//         // }
+//         //this.phase++;
+//         return startAdventure;
+// })();
 
 	chooseInventory(isChecked: boolean, inventoryItem: InventoryItem){
 		if(isChecked){
@@ -49,7 +58,7 @@ export class ScumQuarterComponent {
 		inventoryItem.chosen = isChecked;
 	}
 
-	setInventory(){
+	setInventory(startPage?: string){
 		for(var i = 0; i < this.hero.inventory.length; i++){
 			switch(this.hero.inventory[i].type) {
 				case "gold":
@@ -62,6 +71,7 @@ export class ScumQuarterComponent {
 			}
 		}
 		//TODO: Set this to "1" I am using to debug
+		//TODO: reset all invnetory to chosen false
 		this.setPage("2");
 		this.phase++;
 	}
@@ -79,7 +89,6 @@ export class ScumQuarterComponent {
 			this.enableOptions();
 		}else{
 			this.currentPage.dieRoll = null;
-			//this.enableDie();
 		}
 	}
 

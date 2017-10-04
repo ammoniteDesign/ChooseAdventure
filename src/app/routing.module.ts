@@ -1,9 +1,7 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ScumQuarterComponent }   from './scum-quarter.component';
-//import { HeroesComponent }      from './heroes.component';
-//import { HeroDetailComponent }  from './hero-detail.component';
+import { ScumQuarterComponent }   from './scum-quarter/scum-quarter.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },

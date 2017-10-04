@@ -2,23 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
-//????
 import { AppRoutingModule }        from './routing.module';
+
 
 //Components
 import { AppComponent } from './app.component';
-import { ScumQuarterComponent } from './scum-quarter.component';
 
+//Scum Quarter Components
+import { ScumQuarterComponent } from './scum-quarter/scum-quarter.component';
+import { ScumQuarterStartComponent } from './scum-quarter/scum-quarter-start.component';
 
-//Services???
-import { BookService } from './book.service';
-import { HeroService } from './hero.service';
+//Services
+import { BookService } from './services/book.service';
+import { FunctionService } from './services/functions';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScumQuarterComponent
+    ScumQuarterComponent,
+    ScumQuarterStartComponent
   ],
   entryComponents: [ 
     ScumQuarterComponent
@@ -31,7 +33,7 @@ import { HeroService } from './hero.service';
   ],
   providers: [
   	BookService,
-    HeroService
+    FunctionService
   ],
   bootstrap: [AppComponent]
 })
