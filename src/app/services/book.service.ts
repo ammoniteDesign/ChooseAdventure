@@ -8,18 +8,13 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class BookService {
-	
+
 	constructor(
 		private http: Http
 	) { }
 
-	//@HostBinding('hero') componentHero : Hero;
-	
-
-	getBook(url: string): Promise<any> {
-		//Call and return result
+	getBook(url: string) : Promise<any> {
 		return this.http.get(url).toPromise()
-	}
-
-	
+			
+	}	
 }

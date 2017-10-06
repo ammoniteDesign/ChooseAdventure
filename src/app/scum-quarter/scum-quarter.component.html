@@ -1,75 +1,25 @@
 <h2>Down to the Scum Quarter</h2>
-
 <scum-quarter-start
 	*ngIf="phase === 0"
-	[hero]="hero"
-	[phase]="phase">
+	(startAdventure)="startAdventure($event)">
 </scum-quarter-start>
 
-<main *ngIf="phase === 1">
-	<h3>The Prelude</h3>
-	<article>
-		Your beautiful mistress, the Lady Oiseaux, has been kidnapped. There is only one slim clue that may lead you to her&#8212;a brief message, scrawled in pale-gold eye paint across the side of her hijacked palanquin: Oh! This is awful! I am being kidnapped! They are taking me to sell to a desert chieftain at an auction, which I think is going to take place at midnight somewhere near the river, and I'll miss the party tonight. And I was going to wear my new dress with the ruby chips sewn on cloth of gold, and the peacock feather fan from . . . Those few words, and the "For Sale" brochure you hold in your kid-gloved hand, lead you to suspect that Lady Oiseaux is being held at the infamous Quay of Scented Rats&#8212;a floating bordello now stuck in the mudflats of the River Sleine. Pausing only to slip your trusty rapier into its scabbard, you draw your cloak around you and erupt out into the shadows of the night&#8212;toward the Sleine&#8212;and the vicious, nasty, disgusting . . . (roll of drums) . . . Scum Quarter of the Old City! You walk a few yards with considerable bravado and then whip back to your townhouse. Only a complete fool would go down to the vicious, nasty, disgusting Scum Quarter without pistols and a dagger or two. Maybe you should call in on the lads at the Fencing Academy . . . but there's no time. Select five items from the following list before once again slinking out into the shadows of the night.. . .
-	</article>
-	<form *ngIf="hero.godMode === false" (ngSubmit)="setInventory()"> 
-		<p *ngFor="let inventoryItem of book.inventoryPage.inventoryChoices">
-			<input
-				type="checkbox" 
-				name="inventory" 
-				value="{{inventoryItem.name}}"
-				(change)="chooseInventory($event.target.checked, inventoryItem)"
-				[disabled]="hero.inventory.length > 4 && !inventoryItem.chosen">
-				
-			{{inventoryItem.display}}
-		</p>
-		<button type="sumbit" [disabled]="hero.inventory.length < 5">Let's Go!</button>
-	</form>
-	<article *ngIf="hero.godMode === true">
-		<p>I am a god!</p>
-		<button (click)="setInventory()">Let's go!</button>
-	</article>
-</main>
+<scum-quarter-inventory
+	*ngIf="phase === 1"
+	[hero]=hero
+	[book]=book
+	[currentPage]=currentPage
+	(chooseInventory)="chooseInventory($event)"
+	(startBook)="startBook($event)">
+</scum-quarter-inventory>
 
-
-<main *ngIf="phase === 2">
-	<p>Book Page</p>
-	<article>{{currentPage.copy}}</article>
-	<div *ngIf="currentPage.options != undefined">
-		<button		
-			*ngFor="let option of currentPage.options" 
-			(click)="chooseOption(option)"
-			[disabled]="option.enabled != true" >
-			{{option.copy}}	
-
-			<!-- TODO: Bind an input if the page property is "input" -->
-		</button>
-	</div>
-
-	<!-- TODO: Figure Out how to refresh the entire thing... -->
-	<a *ngIf="currentPage.end" routerLink="/scum-quarter" routerLinkActive="active">Restart</a>
-
-	<aside *ngIf="!hero.godMode">
-		<p>Gold: {{hero.gold}}</p>
-		<dl>
-			<dt>Inventory</dt>
-			<dd *ngFor="let item of hero.inventory">{{item.display}}</dd>
-		</dl>
-		<div *ngIf="currentPage.die">
-			<button (click)="rollDie()">
-				{{currentPage.dieRoll}}
-			</button>
-			<p *ngIf="hero.rollModifier">+/- {{hero.rollEffect}} </p>
-		</div>
-
-	</aside>
-
-	<aside *ngIf="hero.godMode">
-		<p>Gold: ALL</p>
-		<dl>
-			<dt>Inventory</dt>
-			<dd>ALL</dd>
-		</dl>
-		<!-- TODO: Previous Page Next Page And Input Page -->
-	</aside>
-</main>
-<!--  -->
+<scum-quarter-page
+	*ngIf="phase === 2"
+	[hero]=hero
+	[book]=book
+	[currentPage]=currentPage
+	(chooseOption)="chooseOption($event)"
+	(rollDie)="rollDie()"
+	(resetGame)="resetGame()"
+	(setPage)="setPage($event)">
+</scum-quarter-page>

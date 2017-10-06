@@ -44,4 +44,5 @@ export class Effect {
 	//Nullable
 	amount: number; 
 	item: InventoryItem;
+	itemName: string;
 }

@@ -88,6 +88,7 @@
 	"bookPages" : {
 		"1" : {
 			"copy"    : "Moving from shadow to shadow down the wide Boulevard of the Muses, you feel very much like the intrepid adventurer hurrying to rescue his beloved lady. You are so caught up in this delightful little daydream that you don&#8217;t notice the six Watchmen following your erratic shadow-to-shadow progression down the street till you go one shadow too many and find yourself caught in the glare of their lanterns.",
+			"number" : 1,
 			"options" : [
 				{				
 					"copy"      : "If you are carrying a halberd or five-pronged fish spear, Go to 50",
@@ -185,6 +186,8 @@
 			"options" : [
 				{
 					"copy"        : "Do you get out your five-pronged fish spear, leer evilly, and say: &#8220;How many prongs do you want, and where do you want them?&#8221; Go to 77",
+					"equipment" :  ["spear"],
+					"equipmentState"   : "any",
 					"page"     : "77"	
 				},
 				{
@@ -252,7 +255,7 @@
 			"effect"    : [{
 				"type"   : "inventory",
 				"action" : "remove",
-				"item" : "perfume"
+				"itemName" : "perfume"
 			}],
 			"options" : [
 				{
@@ -352,7 +355,7 @@
 					"effect"    : [{
 						"type"   : "inventory",
 						"action" : "remove",
-						"item" : "cognac"
+						"itemName" : "cognac"
 					}]
 				}
 			]
@@ -383,7 +386,7 @@
 					"effect"    : [{
 						"type"   : "inventory",
 						"action" : "remove",
-						"item" : "puppet"
+						"itemName" : "puppet"
 					}]
 				}
 			],
@@ -538,7 +541,7 @@
 						},
 						{
 							"type"   : "gold",
-							"action" : "empty"
+							"action" : "reset"
 						}
 					]
 				},
@@ -599,7 +602,7 @@
 					"effect"    : [{
 						"type"   : "inventory",
 						"action" : "remove",
-						"item" : "stockings"
+						"itemName" : "stockings"
 					}]
 				}
 			]
@@ -1212,7 +1215,7 @@
 					"effect"    : [{
 						"type"   : "inventory",
 						"action" : "remove",
-						"item" : "spear"
+						"itemName" : "spear"
 					}]
 				}
 			],
@@ -1349,8 +1352,20 @@
 			"number" : 86,
 			"options" : [
 				{
-					"copy"         : "Go to the Answer.",
-					"page"      : "input"
+					"copy"         : "The Answer is 80",
+					"page"      : "80"
+				},
+				{
+					"copy"         : "The Answer is 55",
+					"page"      : "55"
+				},
+				{
+					"copy"         : "The Answer is 6",
+					"page"      : "6"
+				},
+				{
+					"copy"         : "The Answer is 20",
+					"page"      : "20"
 				}
 			]
 		},

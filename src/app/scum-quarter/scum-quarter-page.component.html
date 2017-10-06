@@ -1,0 +1,44 @@
+
+	<article>{{currentPage.copy}}</article>
+	<div *ngIf="currentPage.options != undefined">
+		<button		
+			*ngFor="let option of currentPage.options" 
+			(click)="emitChooseOption(option)"
+			[disabled]="option.enabled != true" >
+			{{option.copy}}
+		</button>
+	</div>
+
+	<aside *ngIf="!hero.godMode">
+		<p>Gold: {{hero.gold}}</p>
+		<p>Roll Modifier: {{hero.dieModifier}}</p>
+		<dl>
+			<dt>Inventory</dt>
+			<dd *ngFor="let item of hero.inventory">{{item.display}}</dd>
+		</dl>
+		<div *ngIf="currentPage.die">
+			<button (click)="emitRollDie()">
+				{{currentPage.dieRoll}}
+			</button>
+			<p *ngIf="hero.dieModifier"> {{hero.dieModifier}} </p>
+		</div>
+		<p>Page Number: {{currentPage.number}}</p>
+		<button (click)="emitResetGame()">Restart Game</button>
+	</aside>
+
+	
+	<aside *ngIf="hero.godMode">
+		<p>Gold: ALL</p>
+		<dl>
+			<dt>Inventory</dt>
+			<dd>ALL</dd>
+		</dl>
+		<button (click)="emitSetPage(currentPage.number - 1)" [disabled]="currentPage.number < 2">Previous Page</button>
+		<button (click)="emitSetPage(currentPage.number + 1)" [disabled]="currentPage.number > 99">Next Page</button>
+		{{currentPage.number}}
+		<form (ngSubmit)="emitSetPage(inputPageNumber.value)">
+			<input ngModel name="inputPageNumber" #inputPageNumber required type="number" min="1" max="100"/>
+			<button type="submit" [disabled]="!inputPageNumber.validity.valid">Go</button>
+		</form>
+		<button (click)="emitResetGame()">Restart Game</button>
+	</aside>
