@@ -10,14 +10,14 @@ import {InventoryItem} from './classes/inventory';
 
 export class GameEngineComponent {
     public book : Book;
-    public defaultHero = new Hero;
+    public defaultHero : Hero;
 
     public currentPage : Page;
-    public hero = new Hero;
+    private hero : Hero;
     public phase = 0;
     
 
-    constructor() {       
+    constructor() {   
     }
     
 
@@ -41,6 +41,7 @@ export class GameEngineComponent {
         this.setHero();
         this.setPhase(0);
         this.setPage(null);
+        //TODO: Reset the inventory....
     }
 
     //Inventory Form Checkbox Event Handler
@@ -83,11 +84,7 @@ export class GameEngineComponent {
     //SETTERS
     //Set Hero as Default Hero
     setHero(){
-        this.hero.dieModifier = this.defaultHero.dieModifier;
-        this.hero.godMode = this.defaultHero.godMode;
-        this.hero.gold = this.defaultHero.gold;
-        this.hero.inventory = this.defaultHero.inventory;
-        this.hero.location = this.defaultHero.location;
+        this.hero = this.defaultHero;
     }
 
     //Set Cheating
@@ -105,12 +102,14 @@ export class GameEngineComponent {
     //Add Inventory Object to Hero's Inventory
     addToInventory(inventoryItem){
         this.hero.inventory.push(inventoryItem);
+        console.log(this.defaultHero)
     }
 
     //Remove Hero's Inventory Object by Object's Name
     removeFromInventory(inventoryItemName: string){
         var itemIndex = this.hero.inventory.findIndex(inventoryItem => inventoryItem.name === inventoryItemName);
         this.hero.inventory.splice(itemIndex, 1);
+        console.log(this.defaultHero.inventory)
     }
 
     //Seperate Out Special Inventory Objects

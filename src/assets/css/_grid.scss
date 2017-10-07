@@ -1,0 +1,255 @@
+/// <reference path="jaguar.scss" />
+
+
+/*#region ----------------------------*\
+  #ROWS/Sections
+\*------------------------------------*/
+.section {
+    margin: 0 auto;
+    max-width: $max-width;
+    width: 100%;
+
+    &--small {
+        max-width: $max-width*$small-row;
+    }
+}
+
+.row {
+    position: relative;
+
+    &:after {
+        content: "";
+        overflow: hidden;
+        clear: both;
+        display: block;
+    }
+
+    .col--flush,
+    [class*='col-']:first-child {
+        margin-left: 0;
+    }
+
+    &--padded {
+        padding-left: $outer_pad;
+        padding-right: $outer_pad;
+    }
+}
+
+.row--flex
+{
+    @include display-flex;
+    @include flex-flow(row, wrap);
+    width: 100%;
+	&:after{
+		content: none;
+	}
+}
+
+@media screen and (max-width: $mobile) {
+
+}
+
+@media screen and (max-width: $firstBreak){
+    .row--partly-padded {
+        padding-left: $outer_pad;
+        padding-right: $outer_pad;
+    }
+}
+
+/*#endregion*/
+
+
+
+
+
+/*#region ----------------------------*\
+  #COLUMNS
+\*------------------------------------*/
+.col-1 {
+    @include span(1);
+}
+
+.col-2 {
+    @include span(2);
+}
+
+.col-3 {
+    @include span(3);
+}
+
+.col-4 {
+    @include span(4);
+}
+
+.col-5 {
+    @include span(5);
+}
+
+.col-6 {
+    @include span(6);
+}
+
+.col-7 {
+    @include span(7);
+}
+
+.col-8 {
+    @include span(8);
+}
+
+.col-9 {
+    @include span(9);
+}
+
+.col-10 {
+    @include span(10);
+}
+
+.col-11 {
+    @include span(11);
+}
+
+.col-12 {
+    @include span(12);
+}
+
+.col-13 {
+    @include span(13);
+}
+
+.col-14 {
+    @include span(14);
+}
+
+.col-15 {
+    @include span(15);
+}
+
+.col-16 {
+    @include span(16);
+}
+
+.col-17 {
+    @include span(17);
+}
+
+.col-18 {
+    @include span(18);
+}
+
+.col-19 {
+    @include span(19);
+}
+
+.col-20 {
+    @include span(20);
+}
+
+.col-21 {
+    @include span(21);
+}
+
+.col-22 {
+    @include span(22);
+}
+
+.col-23 {
+    @include span(23);
+}
+
+.col-24 {
+    @include col-full-width;
+}
+/*#endregion*/
+
+
+/*#region ----------------------------*\
+  #FLEX COLUMNS
+\*------------------------------------*/
+
+.flex-1 {
+    @include flex-span(1,0);
+}
+.flex-2 {
+    @include flex-span(2,0);
+}
+.flex-3 {
+    @include flex-span(3,0);
+}
+.flex-4 {
+    @include flex-span(4,0);
+}
+.flex-5 {
+    @include flex-span(5,0);
+}
+.flex-6 {
+    @include flex-span(6,0);
+}
+.flex-7 {
+    @include flex-span(7,0);
+}
+.flex-8 {
+    @include flex-span(8,0);
+}
+.flex-9 {
+    @include flex-span(9,0);
+}
+.flex-10 {
+    @include flex-span(10,0);
+}
+.flex-11 {
+    @include flex-span(11,0);
+}
+.flex-12 {
+    @include flex-span(12,0);
+}
+.flex-13 {
+    @include flex-span(13,0);
+}
+.flex-14 {
+    @include flex-span(14,0);
+}
+.flex-15 {
+    @include flex-span(15,0);
+}
+.flex-16 {
+    @include flex-span(16,0);
+}
+.flex-17 {
+    @include flex-span(17,0);
+}
+.flex-18 {
+    @include flex-span(18,0);
+}
+.flex-19 {
+    @include flex-span(19,0);
+}
+.flex-20 {
+    @include flex-span(20,0);
+}
+.flex-21 {
+    @include flex-span(21,0);
+}
+.flex-22 {
+    @include flex-span(22,0);
+}
+.flex-23 {
+    @include flex-span(23,0);
+}
+/*#endregion*/
+
+
+
+@media screen and (max-width:$mobile){
+	[class*='col-']{
+		width: 100%;
+		margin-left: 0;
+	}
+    .row--flex {
+        display: block;
+
+        &:after {
+            content: "";
+        }
+    }
+}

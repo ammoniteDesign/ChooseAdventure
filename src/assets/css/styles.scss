@@ -1,0 +1,546 @@
+/*#region ----------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+
+// Color naming convention: http://chir.ag/projects/name-that-color/
+
+$white: #ffffff;
+
+$poloBlue: #8DA8CC;
+$mineShaft: #333;
+
+$black: #000000;
+
+$blue: #185BCD;
+
+
+// TRANSITION SPEED
+$slow: 500ms;
+$fast: 250ms;
+
+
+// GRID
+$max_columns: 12;
+$gutter_pc: 1.25%;
+$outer_pad: 2%;
+$max-width: 1200px;
+$small-row: .75;
+$one_col: (100% - (($max_columns - 1) * $gutter_pc)) / $max_columns;
+
+
+//Size Breaks
+$firstBreak: $max-width * (1 + (($outer_pad*2)/100%));
+$tablet: 840px;
+$mobile: 600px;
+$smallMobile: 480px;
+
+/*#endregion*/
+
+
+
+
+
+/*#region ----------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+
+
+
+
+/*#endregion*/
+
+
+
+
+/*#region ----------------------------*\
+  #MIXINS - GRID
+\*------------------------------------*/
+
+@mixin span($num) {
+    width: ($one_col * $num) + ($gutter_pc * ($num - 1));
+    margin-left: $gutter_pc;
+    float: left;
+}
+
+@mixin flex-span($num, $gutter: $gutter_pc) {
+    @include flex(0 1 (percentage($num/$max_columns) - $gutter));
+    margin-left: $gutter;
+    margin-right: $gutter;
+}
+
+@mixin spacing($type, $width) {
+    #{$type}: ($one_col * $width) + ($gutter_pc * ($width - 1));
+}
+
+@mixin padding($top, $side, $bottom: "") {
+    padding: $top (($one_col * $side) + ($gutter_pc * ($side - 1))) unquote($bottom);
+}
+
+@mixin col-full-width {
+    width: 100%;
+    margin-left: 0;
+    clear: both;
+}
+/*#endregion*/
+
+
+
+
+/*#region ----------------------------*\
+  #MIXINS - FLEXBOX (PARENT)
+\*------------------------------------*/
+
+@mixin display-flex {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+}
+
+@mixin display-inline-flex {
+    display: -webkit-inline-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-inline-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-inline-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: inline-flex;
+}
+
+@mixin flex-direction($direction) { // row | row-reverse | column | column-reverse
+    -webkit-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+
+@mixin flex-wrap($wrap) { // nowrap | wrap | wrap-reverse
+    -ms-flex-wrap: $wrap;
+    -webkit-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+}
+
+@mixin flex-flow($direction, $wrap) { // <‘flex-direction’> || <‘flex-wrap’>
+    -webkit-flex-flow: $direction $wrap;
+    -ms-flex-flow: $direction $wrap;
+    flex-flow: $direction $wrap;
+}
+
+@mixin justify-content($justify) { // flex-start | flex-end | center | space-between | space-around
+    -webkit-justify-content: $justify;
+    -ms-justify-content: $justify;
+    justify-content: $justify;
+    -ms-flex-pack: $justify;
+}
+
+@mixin align-items($align) { // flex-start | flex-end | center | baseline | stretch
+    -webkit-flex-item-align: $align;
+    -webkit-align-items: $align;
+    -ms-flex-align: $align;
+    -ms-flex-pack: $align;
+    align-items: $align;
+}
+
+@mixin align-content($align-content) { // flex-start | flex-end | center | space-between | space-around | stretch
+    -webkit-align-content: $align-content;
+    -ms-align-content: $align-content;
+    align-content: $align-content;
+}
+/*#endregion*/
+
+
+
+
+/*#region ----------------------------*\
+  #MIXINS - FLEXBOX (CHILD)
+\*------------------------------------*/
+
+@mixin order($order) { // <number>
+    -webkit-flex-order: $order;
+    -ms-flex-order: $order;
+    -webkit-order: $order;
+    order: $order;
+}
+
+@mixin flex-grow($grow) { // <number>
+    -webkit-flex-grow: $grow;
+    -ms-flex-grow: $grow;
+    flex-grow: $grow;
+}
+
+@mixin flex-shrink($shrink) { // <number>
+    -webkit-flex-shrink: $shrink;
+    -ms-flex: $shrink;
+    flex-shrink: $shrink;
+}
+
+@mixin flex-basis($size) { // <length> | auto;
+    -webkit-flex-basis: $size;
+    -ms-flex-basis: $size;
+    flex-basis: $size;
+}
+
+@mixin flex($flex...) { // none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+    -moz-flex: $flex;
+    -o-flex: $flex;
+    -webkit-flex: $flex;
+    flex: $flex;
+}
+
+@mixin align-self($align-self) { // auto | flex-start | flex-end | center | baseline | stretch
+    -webkit-align-self: $align-self;
+    -ms-align-self: $align-self;
+    align-self: $align-self;
+}
+
+@mixin flex-basis($width) {
+    -webkit-flex-basis: $width;
+    -moz-flex-basis: $width;
+    -ms-flex-preferred-size: $width;
+    flex-basis: $width;
+}
+/*#endregion*/
+
+
+
+
+/*#region ----------------------------*\
+  #MIXINS - TRANSITIONS/TRANSFORM
+\*------------------------------------*/
+
+@mixin transform($transform...) {
+    -moz-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transform-origin($origin...) {
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-property($property...) {
+    -webkit-transition-property: $property;
+    transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+    -webkit-transition-duration: $duration;
+    transition-duration: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+    -webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+//Make arrows point up/down
+
+@mixin animate-arrow($x, $y, $deg) {
+    @include transform(translate($x, $y) rotate(#{$deg}deg));
+}
+/*#endregion*/
+
+
+
+
+/*#region ----------------------------*\
+  #MIXINS - JAVASCRIPT ACCORDION
+\*------------------------------------*/
+@mixin accordionTool() {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    width: 100%;
+
+    &.active {
+        height: auto;
+    }
+}
+/*#endregion*/
+
+
+
+
+/*#region ----------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+@mixin hamburger-button($width, $height, $color, $spacing, $speed, $activeColor,$containerHeight: 0,$containerWidth: 0) {
+    @if $containerHeight > 0 {
+        padding-top: ($containerHeight - ($height*2) - ($spacing*1))/2;
+    }
+
+    @if $containerWidth > 0 {
+        padding-right: ($containerWidth - $width)/2;
+        padding-left: ($containerWidth - $width)/2;
+    }
+
+    span {
+        margin: 0 auto;
+        width: $width; //20
+        height: $height; //3
+        background-color: $color;
+        display: block;
+        @include transition-property(background-color);
+        @include transition-duration(0s);
+        @include transition-delay($speed);
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            width: $width;
+            height: $height;
+            background-color: $color;
+            display: block;
+            @include transition-property(transform, background-color, margin);
+            @include transition-duration($speed, $speed, $speed);
+            @include transition-delay(0s, 0s, $speed);
+        }
+
+        &:before {
+            margin-top: ($height + $spacing) * -1;
+        }
+
+        &:after {
+            margin-top: $height + $spacing;
+        }
+    }
+
+    &.active span {
+        background-color: transparent;
+        @include transition-property(background-color);
+        @include transition-duration(0s);
+        @include transition-delay($speed);
+
+        &:before,
+        &:after {
+            @include transition-property(margin, transform, background-color);
+            @include transition-duration($speed, $speed, $speed);
+            @include transition-delay(0s, $speed, $speed);
+        }
+
+        &:before {
+            margin-top: 0;
+            background-color: $activeColor;
+            @include transform(rotate(45deg));
+        }
+
+        &:after {
+            margin-top: 0;
+            background-color: $activeColor;
+            @include transform(rotate(-45deg));
+        }
+    }
+}
+
+@mixin toggle-button($width, $height, $color, $speed, $activeColor, $rightOffset: 0, $rightPadding: $width*3,$onBtn: true) {
+    @if $onBtn {
+        position: relative;
+    }
+
+    @if $rightPadding != 0 {
+        padding-right: $rightPadding;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $color;
+        width: $width;
+        height: $height;
+        top: 50%;
+        margin-top: -$height*.5;
+
+        @if $rightOffset == 0 {
+            right: $width;
+        }
+        @else {
+            right: $rightOffset;
+        }
+    }
+
+    &:before {
+        @include transform(rotate(-90deg));
+        @include transition(transform $speed ease);
+    }
+
+    @if $onBtn {
+        &.active:before {
+            @include transition(transform $speed ease);
+            @include transform(rotate(0deg));
+        }
+
+        &.active:before,
+        &.active:after {
+            background-color: $activeColor;
+        }
+    }
+}
+
+@mixin close-button($width, $height, $color) {
+    @include transform(rotate(45deg));
+    transform-origin: 50%;
+    display: block;
+    width: $width;
+    height: $width;
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $color;
+    }
+
+    &:before {
+        left: 0;
+        right: 0;
+        height: $height;
+        top: ($width/2) - ($height/2);
+    }
+
+    &:after {
+        top: 0;
+        bottom: 0;
+        width: $height;
+        left: ($width/2) - ($height/2);
+    }
+}
+/*#endregion*/
+
+
+
+
+/*#region ----------------------------*\
+  #ARROWS
+\*------------------------------------*/
+@mixin right-arrow($dashLength, $dashWidth, $offsetAmount, $color, $topOffset: 50%, $offsetSide: "right") {
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: $dashLength;
+        height: $dashLength;
+        #{$offsetSide}: $offsetAmount;
+        border-right: $dashWidth solid $color;
+        border-top: $dashWidth solid $color;
+        transform: rotate(45deg);
+        top: calc(#{$topOffset} - #{$dashLength*.55});
+    }
+}
+
+@mixin position-arrow($top, $left, $width, $height, $background) {
+    position: relative;
+    top: $top;
+    left: $left;
+
+    &:before,
+    &:after {
+        content: "";
+        transition: all 0.25s ease-in-out;
+        position: absolute;
+        width: $width;
+        height: $height;
+        background-color: $background;
+    }
+}
+
+/*#endregion*/
+
+
+
+
+/*#region ----------------------------*\
+  #KEYFRAMES - ANIMATIONS
+\*------------------------------------*/
+@keyframes input-error {
+
+    0% {
+        max-height: 0;
+        opacity: 0;
+        /*transform: translateY(-50%);*/
+    }
+
+    100% {
+        max-height: 6rem;
+        opacity: 1;
+        /*transform: translateY(0%);*/
+    }
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+@keyframes fadeInGrow {
+    0% {
+        transform: scale(.95);
+        opacity: 0;
+        visibility: visible;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOutShrink {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    99% {
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(.95);
+        visibility: hidden;
+    }
+}
+/*#endregion*/
+
+
+
+
+/*#region ----------------------------*\
+  #PARTIALS
+\*------------------------------------*/
+@import "_normalize.scss";
+@import "_grid.scss";
+@import "_global.scss";
+@import "_book.scss";
+/*#endregion*/

@@ -6,81 +6,94 @@
 				"name": "pistol",
 				"type" : "item",
 				"chosen" : false,
-				"display": "Dagger Pistol (with powder &amp; balls for five shots)"
+				"display": "Dagger Pistol (with powder & balls for five shots)",
+				"imgUrl" : "assets/scum-quarter/images/pistol.png"
 			},
 			{
 				"name": "gold",
 				"type" : "gold",
 				"amount" : 20,
 				"chosen" : false,
-				"display": "Bag of 20 gold bezants"
+				"display": "Bag of 20 gold bezants",
+				"imgUrl" : "assets/scum-quarter/images/gold.png"
 				
 			},
 			{
 				"name": "portrait",
 				"type" : "item",
 				"chosen" : false,
-				"display": "Portrait of Lady Oiseaux (3'6 square)"
+				"display": "Portrait of Lady Oiseaux (3'6 square)",
+				"imgUrl" : "assets/scum-quarter/images/portrait.png"
 			},
 			{
 				"name": "handkerchief",
 				"type" : "item",
 				"chosen" : false,
-				"display": "Scented handkerchief"
+				"display": "Scented handkerchief",
+				"imgUrl" : "assets/scum-quarter/images/handkerchief.png"
 			},
 			{
 				"name": "halberd",
 				"type" : "item",
 				"chosen" : false,
-				"display": "Halberd"
+				"display": "Halberd",
+				"imgUrl" : "assets/scum-quarter/images/halberd.png"
 			},
 			{
 				"name": "rope",
 				"type" : "item",
 				"chosen" : false,
-				"display": "20' rope"
+				"display": "20' rope",
+				"imgUrl" : "assets/scum-quarter/images/rope.png"
 			},
 			{
 				"name": "watch",
 				"type" : "item",
 				"chosen" : false,
-				"display": "Repeater watch"
+				"display": "Repeater watch",
+				"imgUrl" : "assets/scum-quarter/images/watch.png"
 			},
 			{
 				"name": "cognac",
 				"type" : "item",
 				"chosen" : false,
-				"display": "Bottle El Superbeau Cognac"
+				"display": "Bottle El Superbeau Cognac",
+				"imgUrl" : "assets/scum-quarter/images/cognac.png"
 			},
 			{
 				"name": "stockings",
 				"type" : "item",
 				"chosen" : false,
-				"display": "2 pairs silk stockings"
+				"display": "2 pairs silk stockings",
+				"imgUrl" : "assets/scum-quarter/images/stockings.png"
 			},
 			{
 				"name": "puppet",
 				"type" : "item",
 				"chosen" : false,
-				"display": "A glove puppet of Cyrano de Bergerac"
+				"display": "A glove puppet of Cyrano de Bergerac",
+				"imgUrl" : "assets/scum-quarter/images/puppet.png"
 			},
 			{
 				"name": "saint",
 				"type" : "item",
 				"chosen" : false,
-				"display": "Small plaster saint"
+				"display": "Small plaster saint",
+				"imgUrl" : "assets/scum-quarter/images/saint.png"
 			},
 			{
 				"name": "perfume",
 				"type" : "item",
 				"chosen" : false,
-				"display": "Bottle Opossum perfume"
+				"display": "Bottle Opossum perfume",
+				"imgUrl" : "assets/scum-quarter/images/perfume.png"
 			},
 			{
 				"name": "spear",
 				"type" : "item",
 				"chosen" : false,
-				"display": "Five-pronged fish spear"
+				"display": "Five-pronged fish spear",
+				"imgUrl" : "assets/scum-quarter/images/spear.png"
 			}			
 		],
 		"amount" : 5

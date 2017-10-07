@@ -27,20 +27,21 @@ export class ScumQuarterComponent extends GameEngineComponent {
 	constructor(private bookService: BookService) {
 		super();
 		//Set Default Hero Properties
-    this.defaultHero.dieModifier = 0;
-    this.defaultHero.godMode = false;
-    this.defaultHero.gold = 0;
-    this.defaultHero.inventory = [];
-    this.defaultHero.location = 1;
+        this.defaultHero = new Hero;
+        this.defaultHero.dieModifier = 0;
+        this.defaultHero.godMode = false;
+        this.defaultHero.gold = 0;
+        this.defaultHero.inventory = [];
+        this.defaultHero.location = 1;
 
-    //SetUp Hero
-    this.setHero();
-	
-    //SetUp Book
-    bookService.getBook('assets/js/ScumQuarter.json')
-    	.then(response => {
-    		this.book = response.json() as Book;
-    	});
-	}
+        //SetUp Hero
+        this.setHero();
+    	
+        //SetUp Book
+        bookService.getBook('assets/scum-quarter/ScumQuarter.json')
+        	.then(response => {
+        		this.book = response.json() as Book;
+        	});
+    	}
  	
 }
