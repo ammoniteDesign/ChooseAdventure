@@ -26,13 +26,19 @@ export class ScumQuarterComponent extends GameEngineComponent {
 
 	constructor(private bookService: BookService) {
 		super();
-		//Set Default Hero Properties
+
+        this.hero = new Hero;
         this.defaultHero = new Hero;
+        this.phase = 0;
+        
+		//Set Default Hero Properties
+        //this.heroDefaults = {"dieModifier" : 0, "godMode" : false,"gold" : 0,"inventory" : [],"location" : 1}
         this.defaultHero.dieModifier = 0;
         this.defaultHero.godMode = false;
         this.defaultHero.gold = 0;
         this.defaultHero.inventory = [];
         this.defaultHero.location = 1;
+        
 
         //SetUp Hero
         this.setHero();

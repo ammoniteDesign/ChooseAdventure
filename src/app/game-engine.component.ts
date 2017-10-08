@@ -9,12 +9,12 @@ import {InventoryItem} from './classes/inventory';
 })
 
 export class GameEngineComponent {
-    public book : Book;
+    protected book : Book;
     public defaultHero : Hero;
 
-    public currentPage : Page;
-    private hero : Hero;
-    public phase = 0;
+    protected currentPage : Page;
+    protected hero : Hero;
+    protected phase : number;
     
 
     constructor() {   
@@ -31,8 +31,9 @@ export class GameEngineComponent {
     //Start Book Event Handler
     startBook(){
         this.setInventory();
+        this.resetInventoryChoices();
          //TODO: Set this to "1" I am using to debug
-        this.setPage("86");
+        this.setPage("1");
         this.setPhase((this.phase + 1));
     }
 
@@ -41,7 +42,6 @@ export class GameEngineComponent {
         this.setHero();
         this.setPhase(0);
         this.setPage(null);
-        //TODO: Reset the inventory....
     }
 
     //Inventory Form Checkbox Event Handler
@@ -84,7 +84,8 @@ export class GameEngineComponent {
     //SETTERS
     //Set Hero as Default Hero
     setHero(){
-        this.hero = this.defaultHero;
+        //Need to break the bindings. This hack is the only thing that worked
+        this.hero  = JSON.parse(JSON.stringify(this.defaultHero));
     }
 
     //Set Cheating
@@ -103,13 +104,14 @@ export class GameEngineComponent {
     addToInventory(inventoryItem){
         this.hero.inventory.push(inventoryItem);
         console.log(this.defaultHero)
+        console.log(this.hero)
     }
 
     //Remove Hero's Inventory Object by Object's Name
     removeFromInventory(inventoryItemName: string){
         var itemIndex = this.hero.inventory.findIndex(inventoryItem => inventoryItem.name === inventoryItemName);
         this.hero.inventory.splice(itemIndex, 1);
-        console.log(this.defaultHero.inventory)
+        console.log(this.defaultHero)
     }
 
     //Seperate Out Special Inventory Objects
@@ -124,6 +126,13 @@ export class GameEngineComponent {
                 default:
                     break;
             }
+        }
+    }
+
+    resetInventoryChoices(){
+        var inventoryChoices = this.book.inventoryPage.inventoryChoices
+        for(var i = 0; i < inventoryChoices.length; i++){
+            inventoryChoices[i].chosen = false;
         }
     }
 
