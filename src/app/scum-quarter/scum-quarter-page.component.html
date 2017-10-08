@@ -8,7 +8,7 @@
 
 	<div *ngIf="currentPage.options != undefined">
 		<button	
-			class="btn btn--option"	
+			class="option"	
 			*ngFor="let option of currentPage.options" 
 			(click)="emitChooseOption(option)"
 			[disabled]="option.enabled != true"

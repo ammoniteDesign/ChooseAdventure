@@ -532,7 +532,7 @@
 						"item" : {
 							"name" : "tongs",
 							"display" : "A pair of long-handled biscuit tongs",
-							"imgUrl" : "TODO"
+							"imgUrl" : "assets/scum-quarter/images/tongs.png"
 						}
 					}]
 				}
@@ -1118,7 +1118,7 @@
 						"item" : {
 							"name" : "bodyStocking",
 							"display" : "A bright-blue one-piece sealskin body stocking",
-							"imgUrl" : "TODO"
+							"imgUrl" : "assets/scum-quarter/images/bodyStocking.png"
 						}
 					}]
 				}

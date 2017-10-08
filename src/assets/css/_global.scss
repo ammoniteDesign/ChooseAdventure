@@ -8,7 +8,7 @@
 }
 
 body, html {
-    font: 14px/1.5 Arial, Helvetica, sans-serif;
+    font: 14px/1.5 Roboto, Helvetica, sans-serif;
     background-color: $white;
 }
 
@@ -82,6 +82,7 @@ article li {
     margin-top: .5em;
     margin-bottom: .5em;
     line-height: 1.1;
+    font-family: 'PT Serif', serif;
 
 }
 
@@ -135,22 +136,19 @@ article li {
     outline: none;
     padding: .75rem 1.5rem;
     margin: 0 0 .25rem;
-    background-color: $poloBlue;
-    border: 1px solid $blue;
-    color: $black;
+    background-color: $cello;
+    border: 1px solid $poloBlue;
+    color: $white;
     text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
     @include transition(background $fast ease-in-out, color $fast ease-in-out, border-color $fast ease-in-out);
 
     &:disabled {
         opacity: .6;
     }
 
-    /*Inline Button Styles*/
-    &--option {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
+
 }
 
 /*#endregion*/
@@ -302,33 +300,6 @@ article li {
         padding-top: 1rem;
         padding-bottom: 1rem;
 
-        &__row {
-            @include padding(1rem, 1);
-        }
-
-
-        &__logo {
-            position: fixed;
-            height: $headerHeight;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            background: $white;
-            padding-right: $navBtnWidth;
-            padding-left: .5rem;
-            border-bottom: 1px solid $black;
-
-            &__img {
-                width: $headerHeight;
-            }
-        }
-
-        &--no-nav {
-            margin-top: 0;
-        }
     }
     /*#endregion*/
 }

@@ -47,6 +47,8 @@ export class ScumQuarterComponent extends GameEngineComponent {
         bookService.getBook('assets/scum-quarter/ScumQuarter.json')
         	.then(response => {
         		this.book = response.json() as Book;
+                //TODO: Remove -- Using to Debug
+                //this.setPage("1");
         	});
     	}
  	

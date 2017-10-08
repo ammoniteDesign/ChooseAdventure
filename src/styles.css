@@ -845,7 +845,7 @@ template {
   box-sizing: border-box; }
 
 body, html {
-  font: 14px/1.5 Arial, Helvetica, sans-serif;
+  font: 14px/1.5 Roboto, Helvetica, sans-serif;
   background-color: #ffffff; }
 
 p {
@@ -902,7 +902,8 @@ article li {
 .heading {
   margin-top: .5em;
   margin-bottom: .5em;
-  line-height: 1.1; }
+  line-height: 1.1;
+  font-family: 'PT Serif', serif; }
 
 .h1 {
   font-size: 2.25rem; }
@@ -937,19 +938,16 @@ article li {
   outline: none;
   padding: .75rem 1.5rem;
   margin: 0 0 .25rem;
-  background-color: #8DA8CC;
-  border: 1px solid #185BCD;
-  color: #000000;
+  background-color: #1D355E;
+  border: 1px solid #8DA8CC;
+  color: #ffffff;
   text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
   -webkit-transition: background 250ms ease-in-out, color 250ms ease-in-out, border-color 250ms ease-in-out;
-  transition: background 250ms ease-in-out, color 250ms ease-in-out, border-color 250ms ease-in-out;
-  /*Inline Button Styles*/ }
+  transition: background 250ms ease-in-out, color 250ms ease-in-out, border-color 250ms ease-in-out; }
   .btn:disabled {
     opacity: .6; }
-  .btn--option {
-    display: block;
-    width: 100%;
-    text-align: left; }
 
 /*#endregion*/
 /*#region ----------------------------*\
@@ -1064,25 +1062,6 @@ article li {
     margin-top: 55px;
     padding-top: 1rem;
     padding-bottom: 1rem; }
-    .header__row {
-      padding: 1rem 7.1875% ; }
-    .header__logo {
-      position: fixed;
-      height: 55px;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      background: #ffffff;
-      padding-right: 50px;
-      padding-left: .5rem;
-      border-bottom: 1px solid #000000; }
-      .header__logo__img {
-        width: 55px; }
-    .header--no-nav {
-      margin-top: 0; }
 
   /*#endregion*/ }
 .book__page {
@@ -1107,15 +1086,17 @@ article li {
       top: 0;
       left: 0;
       opacity: 0;
-      display: flex; }
+      display: flex;
+      cursor: pointer; }
       .inventory__item__checkbox:disabled + label {
-        opacity: .7; }
+        opacity: .7;
+        cursor: not-allowed; }
       .inventory__item__checkbox:checked + label img {
-        border-color: #000000; }
+        border-color: #1D355E; }
     .inventory__item__label {
       display: block; }
       .inventory__item__label img {
-        border: 5px solid gray; }
+        border: 5px solid #8DA8CC; }
     .inventory__item__description {
       width: 100%;
       max-width: 150px;
@@ -1131,6 +1112,18 @@ article li {
   border: 1px solid #8DA8CC;
   background: #ffffff;
   cursor: pointer; }
+
+.option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 2px solid #8DA8CC;
+  background: #ffffff;
+  padding: 1rem 2%;
+  margin-bottom: .5rem;
+  cursor: pointer; }
+  .option:disabled {
+    cursor: not-allowed; }
 
 /*#endregion*/
 

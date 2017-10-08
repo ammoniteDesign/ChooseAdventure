@@ -28,13 +28,15 @@
 			left: 0;
 			opacity: 0;
 			display: flex;
+			cursor: pointer;
 
 			&:disabled + label {
 				opacity: .7;
+				cursor: not-allowed;
 			}
 
 			&:checked + label img {
-				border-color: $black;
+				border-color: $cello;
 			}
 		}
 
@@ -42,7 +44,7 @@
 			display: block;
 
 			img{
-				border: 5px solid gray;
+				border: 5px solid $poloBlue;
 				
 			}
 			
@@ -66,4 +68,19 @@
 	border: 1px solid $poloBlue;
 	background: $white;
 	cursor: pointer;
+}
+
+.option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: 2px solid $poloBlue;
+    background: $white;
+    padding: 1rem 2%;
+    margin-bottom: .5rem;
+    cursor: pointer;
+
+    &:disabled {
+    	cursor: not-allowed;
+    }
 }
