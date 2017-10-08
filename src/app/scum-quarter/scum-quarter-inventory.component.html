@@ -13,19 +13,19 @@
 		<button class="btn" *ngIf="hero.godMode === true" (click)="emitStartBook()">Let's go!</button>
 	</article>
 	<form *ngIf="hero.godMode === false" (ngSubmit)="emitStartBook()">
-		<div class="inventory-form row row--flex">
-			<div class="inventory-form__option" *ngFor="let inventoryItem of book.inventoryPage.inventoryChoices">
+		<div class="inventory row row--flex">
+			<div class="inventory__item" *ngFor="let inventoryItem of book.inventoryPage.inventoryChoices">
 				<input
 					id="{{inventoryItem.name}}"
-					class="inventory-form__option__checkbox"
+					class="inventory__item__checkbox"
 					type="checkbox" 
 					name="inventory"
 					(change)="emitChooseInventory($event.target.checked, inventoryItem)"
 					[disabled]="hero.inventory.length > 4 && !inventoryItem.chosen" />
 					
-				<label for="{{inventoryItem.name}}" class="inventory-form__option__label">
+				<label for="{{inventoryItem.name}}" class="inventory__item__label">
 					<img src="{{inventoryItem.imgUrl}}" />
-					<p class="inventory-form__option__description">{{inventoryItem.display}}</p>
+					<p class="inventory__item__description">{{inventoryItem.display}}</p>
 				</label>
 			</div>
 		</div>

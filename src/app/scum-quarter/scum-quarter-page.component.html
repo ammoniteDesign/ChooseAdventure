@@ -1,31 +1,36 @@
 <article class="col-8">
+	<h3 class="heading h1">Page {{currentPage.number}}</h3>
 	<p [innerHTML]="currentPage.copy"></p>
+
+	<button *ngIf="currentPage.die" class="die" (click)="emitRollDie()">
+		{{currentPage.dieRoll | die}}
+	</button>
+
 	<div *ngIf="currentPage.options != undefined">
 		<button	
 			class="btn btn--option"	
 			*ngFor="let option of currentPage.options" 
 			(click)="emitChooseOption(option)"
-			[disabled]="option.enabled != true" >
-			{{option.copy}}
+			[disabled]="option.enabled != true"
+			[innerHTML]="option.copy" >
 		</button>
 	</div>
+
+	<button *ngIf="currentPage.end" class="btn" (click)="emitResetGame()">Restart Game</button>
 </article>
 
 	<aside class="col-4" *ngIf="!hero.godMode">
-		<p>Gold: {{hero.gold}}</p>
-		<p>Roll Modifier: {{hero.dieModifier}}</p>
-		<dl>
-			<dt>Inventory</dt>
-			<dd *ngFor="let item of hero.inventory">{{item.display}}</dd>
-		</dl>
-		<div *ngIf="currentPage.die">
-			<button (click)="emitRollDie()">
-				{{currentPage.dieRoll}}
-			</button>
-			<p *ngIf="hero.dieModifier"> {{hero.dieModifier}} </p>
-		</div>
-		<p>Page Number: {{currentPage.number}}</p>
-		<button class="btn" (click)="emitResetGame()">Restart Game</button>
+		<h5 class="heading h3">Gold</h5>
+		<p>{{hero.gold}}</p>
+		<h5 class="heading h3">Roll Modifier</h5>
+		<p>{{hero.dieModifier}}</p>
+		<h5 class="heading h3">Inventory</h5>
+		<section class="row row--flex inventory">		
+			<div class="inventory__item inventory__item--book" *ngFor="let item of hero.inventory">
+				<img src="{{item.imgUrl}}" />
+			</div>
+		</section>				
+		
 	</aside>
 
 	

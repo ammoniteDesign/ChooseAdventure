@@ -17,8 +17,9 @@ import { ScumQuarterStartComponent } from './scum-quarter/scum-quarter-start.com
 import { ScumQuarterInventoryComponent } from './scum-quarter/scum-quarter-inventory.component';
 import { ScumQuarterPageComponent } from './scum-quarter/scum-quarter-page.component';
 
-//Services
+//Services and Pipes
 import { BookService } from './services/book.service';
+import { DiePipe } from './services/die.pipe';
 
 
 
@@ -29,6 +30,7 @@ import { BookService } from './services/book.service';
     GameEngineStartComponent,
     GameEngineInventoryComponent,
     GameEnginePageComponent,
+    DiePipe,
     
     ScumQuarterComponent,
     ScumQuarterStartComponent,

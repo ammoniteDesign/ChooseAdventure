@@ -138,8 +138,6 @@ article li {
     background-color: $poloBlue;
     border: 1px solid $blue;
     color: $black;
-    font-weight: 700;
-    text-transform: uppercase;
     text-decoration: none;
     @include transition(background $fast ease-in-out, color $fast ease-in-out, border-color $fast ease-in-out);
 

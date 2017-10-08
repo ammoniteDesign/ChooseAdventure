@@ -66,6 +66,11 @@ export class GameEngineComponent {
 
     //Choose an Option Event Handler and Associated Setters
     chooseOption(option: Option){
+        if(option.page === undefined || option.page === null){
+            //Some pages have a Dead option
+            return;
+        }
+
         //Because JS will read my JSon as a number irredisregardless
         var pageString = option.page.toString();
 
