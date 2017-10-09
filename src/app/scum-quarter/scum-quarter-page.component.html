@@ -1,8 +1,9 @@
 <article class="col-8">
 	<h3 class="heading h1">Page {{currentPage.number}}</h3>
+	<img *ngIf="currentPage.imageUrl != undefined" src="{{currentPage.imageUrl}}" alt="{{currentPage.imageAltText}}" width="600" />
 	<p [innerHTML]="currentPage.copy"></p>
 
-	<button *ngIf="currentPage.die" class="die" (click)="emitRollDie()">
+	<button *ngIf="currentPage.die && !hero.godMode" class="die" (click)="emitRollDie()">
 		{{currentPage.dieRoll | die}}
 	</button>
 
@@ -18,28 +19,26 @@
 
 	<button *ngIf="currentPage.end" class="btn" (click)="emitResetGame()">Restart Game</button>
 </article>
+<aside class="col-4">
 
-	<aside class="col-4" *ngIf="!hero.godMode">
-		<h5 class="heading h3">Gold</h5>
-		<p>{{hero.gold}}</p>
-		<h5 class="heading h3">Roll Modifier</h5>
-		<p>{{hero.dieModifier}}</p>
-		<h5 class="heading h3">Inventory</h5>
-		<section class="row row--flex inventory">		
-			<div class="inventory__item inventory__item--book" *ngFor="let item of hero.inventory">
-				<img src="{{item.imgUrl}}" />
-			</div>
-		</section>				
-		
-	</aside>
-
+	<h5 class="heading h3">Gold</h5>
+	<p>{{hero.godMode ? 'Funny Text Here' : hero.gold}}</p>
+	<h5 class="heading h3">Roll Modifier</h5>
+	<p>{{hero.godMode ? 'Funny Text Here' : hero.dieModifier}}</p>
+	<h5 class="heading h3">Inventory</h5>
+	<section *ngIf="!hero.godMode" class="row row--flex inventory">		
+		<div class="inventory__item inventory__item--book" *ngFor="let item of hero.inventory">
+			<img src="{{item.imgUrl}}" alt="{{item.display}}" width="100" height="100" />
+		</div>
+	</section>
+	<p *ngIf="hero.godMode">Funny Text Here</p>
 	
-	<aside class="col-4" *ngIf="hero.godMode">
-		<p>Gold: ALL</p>
-		<dl>
-			<dt>Inventory</dt>
-			<dd>ALL</dd>
-		</dl>
+	<button class="btn" (click)="emitSaveGameState()">Bookmark This Page</button>
+
+	<button class="btn" (click)="emitLoadGameState()">Go to Bookmarked Page</button>
+
+	<div *ngIf="hero.godMode">
+		<h5 class="heading h3">Cheating Controls (?)</h5>
 		<button (click)="emitSetPage(currentPage.number - 1)" [disabled]="currentPage.number < 2">Previous Page</button>
 		<button (click)="emitSetPage(currentPage.number + 1)" [disabled]="currentPage.number > 99">Next Page</button>
 		{{currentPage.number}}
@@ -48,4 +47,6 @@
 			<button type="submit" [disabled]="!inputPageNumber.validity.valid">Go</button>
 		</form>
 		<button class="btn" (click)="emitResetGame()">Restart Game</button>
-	</aside>
+	</div>
+</aside>
+	

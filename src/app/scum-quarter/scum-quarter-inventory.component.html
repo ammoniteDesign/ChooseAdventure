@@ -24,7 +24,7 @@
 					[disabled]="hero.inventory.length > 4 && !inventoryItem.chosen" />
 					
 				<label for="{{inventoryItem.name}}" class="inventory__item__label">
-					<img src="{{inventoryItem.imgUrl}}" />
+					<img src="{{inventoryItem.imgUrl}}" alt="{{inventoryItem.display}}" width="150" height="150" />
 					<p class="inventory__item__description">{{inventoryItem.display}}</p>
 				</label>
 			</div>

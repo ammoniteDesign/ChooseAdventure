@@ -13,9 +13,10 @@ export class Page {
 
 	//Must Haves
 	copy: string;
-	number: number;
 
 	//Nullable 
+	imageUrl: string;
+	imageAltText: string;
 	options: Option[]; //Null/Empyt
 	die: boolean; //False
 	dieRoll: number;
@@ -46,3 +47,4 @@ export class Effect {
 	item: InventoryItem;
 	itemName: string;
 }
+

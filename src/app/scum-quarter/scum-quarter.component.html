@@ -6,7 +6,7 @@
 				*ngIf="phase === 0"
 				(startAdventure)="startAdventure($event)">
 			</scum-quarter-start>
-<!--  -->
+			
 			<scum-quarter-inventory
 				*ngIf="phase === 1"
 				[hero]=hero
@@ -24,7 +24,9 @@
 				(chooseOption)="chooseOption($event)"
 				(rollDie)="rollDie()"
 				(resetGame)="resetGame()"
-				(setPage)="setPage($event)">
+				(setPage)="setPage($event)"
+				(saveGameState)="saveGameState($event)"
+				(loadGameState)="loadGameState($event)">
 			</scum-quarter-page>
 		</div>
 	</div>

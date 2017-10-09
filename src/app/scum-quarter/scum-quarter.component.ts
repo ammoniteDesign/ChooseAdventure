@@ -37,7 +37,7 @@ export class ScumQuarterComponent extends GameEngineComponent {
         this.defaultHero.godMode = false;
         this.defaultHero.gold = 0;
         this.defaultHero.inventory = [];
-        this.defaultHero.location = 1;
+        this.defaultHero.location = "7";
         
 
         //SetUp Hero

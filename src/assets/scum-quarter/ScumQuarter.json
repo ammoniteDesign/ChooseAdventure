@@ -191,6 +191,8 @@
 		"5" : {
 			"copy"    : "You smile sickeningly and cross over to the tiger, mumbling &#8220;nice pussums . . . good kit-e-kat.. . .&#8221; You reach down to scratch its stomach, and it grabs you with both paws and bites your head off. As your soul becomes a delicate butterfly and floats off to the transit lounge, you feel that this would never have happened if you had read The Jungle Books as a child. The End.",
 			"number" : 5,
+			"imageUrl" : "assets/scum-quarter/images/end_tiger.jpg",
+			"imageAltText" : "A tiger wearing your cavalier hat licking your skull",
 			"end" : true
 		},
 		"6" : {
@@ -704,6 +706,8 @@
 		"37" : {
 			"copy"    : "Your arms get more and more tired, the wind comes up, and it starts raining. You almost fall several times. Then, in desperation, you start to climb down. Unfortunately, you slip, slide down the wind-mill&#8217;s roof, and out... down at least forty feet. Fortunately, the hunchback breaks your fall . . . and you break both your legs. You crawl away before the hunchback regains consciousness. For you, this adventure is over, and you are about to embark upon another. (See “The Ferocious Bill of Orthopedic Surgeon Fu Manchu” Adventure 27 in this series.)",
 			"number" : 37,
+			"imageUrl" : "assets/scum-quarter/images/end_hospitalbed.jpg",
+			"imageAltText" : "You in a hospital bed with your legs in traction.",
 			"end"     : true
 		},
 		"38" : {
@@ -811,6 +815,8 @@
 		"45" : {
 			"copy"    : "You turn back toward the Southgate. Lightning flashes across the sky. Thunder resounds throughout the postern tunnel in which you are sheltering from falling albatrosses. An ancient mariner appears and shoots you with his crossbow. The last words you hear are the senile old fool saying: “That&#8217;s funny. I could have sworn it was an albatross. Must have been the lightning. . . .” The End.",
 			"number" : 45,
+			"imageUrl" : "assets/scum-quarter/images/end_ancientmariner.jpg",
+			"imageAltText" : "An ancient mariner with a crossbow and a dead albatross chained to him",
 			"end"     : true
 		},
 		"46" : {
@@ -996,7 +1002,7 @@
 			]
 		},
 		"59" : {
-			"copy"    : "Heading north by northwest, you arrive in Ma&#8217;s Field—a small patch of greenery, where many aged women farm market gardens. At the other end of the field, a resplendent red-and-gold Montgolfier is drifting along, with a man throwing primitive fertilizer over the side—it is obviously one of those new-fangled crop-dusting balloons. It drifts closer, and the occupant seems to take an interest in you.",
+			"copy"    : "Heading north by northwest, you arrive in Ma&#8217;s Field—a small patch of greenery, where many aged women farm market gardens. At the other end of the field, a resplendent red-and-gold Montgolfier is drifting along, with a man throwing primitive fertilizer over the side—it is obviously one of those new-fangled crop-dusting hot air balloons. It drifts closer, and the occupant seems to take an interest in you.",
 			"number" : 59,
 			"options" : [
 				{
@@ -1078,11 +1084,15 @@
 		"65" : {
 			"copy"    : "As you struggle to get the halberd out from under your cloak, the Sergeant steps back, and all four Watchmen lower their blunderbusses and fire. Your last thought before you shuffle off this mortal coil is whether you left the mulled wine on the fire. Maybe it&#8217;s boiled dry....",
 			"number" : 65,
+			"imageUrl" : "assets/scum-quarter/images/end_firingsquad.jpg",
+			"imageAltText" : "Watchmen with guns shooting at you",
 			"end"     : true
 		},
 		"66" : {
 			"copy"    : "You treacherous little worm! Okay—leave Lady Oiseaux to the tender mercies of a desert chieftain. Don&#8217;t sample the delights of the Quay of Scented Rats or . . . or . . . words fail me. I hope you get a part as Minotaur bait in “Theseus Does Knossos: Choose Your Own Adventure 288.” And you can leave the El Superbeau cognac behind.",
 			"number" : 66,
+			"imageUrl" : "assets/scum-quarter/images/end_exit.jpg",
+			"imageAltText" : "A cannon aimed at you in a hot air balloon",
 			"end"     : true
 		},
 		"67" : {
@@ -1157,6 +1167,8 @@
 		"73" : {
 			"copy"    : "There&#8217;s no point beating about the bush on this one. I&#8217;ll tell it to you straight, without circumlocution, shilly-shallying, or avoiding the subject. It&#8217;s bad news, but what isn&#8217;t these days? What with the price of El Superbeau up to four hundred bezants the tun, the king frolicking in orange orchards, the country going to the dogs . . . it&#8217;s all bad news. Oh yes . . . Z——O kills you. Right through the heart. T h o c k !A n d it&#8217;s all over . . . and you were so close to success. . ..",
 			"number" : 73,
+			"imageUrl" : "assets/scum-quarter/images/end_zorro.jpg",
+			"imageAltText" : "Your corpse with a Z carved into your face",
 			"end"     : true
 		},
 		"74" : {
@@ -1547,6 +1559,8 @@
 		"100" : {
 			"copy"    : "You fling open the velvet-padded door and strike a commanding pose in the doorway. Your love, the Lady Oiseaux, is sitting by the mirror, putting on her earrings. She ignores you for a moment, then says: “If you&#8217;re coming in, come in. Ow! And help me with this earring. What took you so long anyway? You used to rescue me in no time at all—I guess you&#8217;re getting tired of me. No, don&#8217;t say you&#8217;re not. I know you are, otherwise you would have been here hours ago (sob).. . .” You stride across the room and stop her protests with a passionate kiss, sweep her into your arms, and leap out the window—onto the deck of a conveniently passing luxury wide-bodied gondola. The string quartet looks surprised, then breaks into the theme from Love Story. The waiter pops the champagne as you and your lady recline into the lavender-scented pillows, and the gondola gondols away into the setting sun, long life, and happiness ever after.*<br><br>*Hardened cynics may order the alternative, realistic, nonromantic ending (involving several hunchbacks, gruesome deeds, tragedy, and despair) by sending $2.00 to the author. ",
 			"number" : 100,
+			"imageUrl" : "assets/scum-quarter/images/end_win.jpg",
+			"imageAltText" : "You and Lady Oiseaux",
 			"end" : true
 		}
 	}

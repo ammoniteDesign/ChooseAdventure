@@ -16,6 +16,8 @@ export class GameEnginePageComponent {
     @Output() rollDie = new EventEmitter<any>();
     @Output() resetGame = new EventEmitter<any>();
     @Output() setPage = new EventEmitter<any>();
+    @Output() saveGameState = new EventEmitter<any>();
+    @Output() loadGameState = new EventEmitter<any>();
 	
 
 	emitChooseOption(option){
@@ -32,5 +34,13 @@ export class GameEnginePageComponent {
 
 	emitSetPage(pageNumber){
 		this.setPage.emit(pageNumber);
+	}
+
+	emitSaveGameState(){
+		this.saveGameState.emit();
+	}
+
+	emitLoadGameState(){
+		this.loadGameState.emit();
 	}
 }

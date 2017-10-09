@@ -5,6 +5,5 @@ export class Hero {
 	inventory: InventoryItem[];
 	gold: number;
 	dieModifier: number;
-	location: number;
-	//moves: Moves;
+	location: string;
 }

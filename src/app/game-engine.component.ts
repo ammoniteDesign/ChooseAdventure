@@ -15,6 +15,9 @@ export class GameEngineComponent {
     protected currentPage : Page;
     protected hero : Hero;
     protected phase : number;
+
+    private heroSnapshot = new Hero;
+    private savedHero = new Hero;
     
 
     constructor() {   
@@ -33,12 +36,29 @@ export class GameEngineComponent {
         this.setInventory();
         this.resetInventoryChoices();
          //TODO: Set this to "1" I am using to debug
-        this.setPage("1");
+        this.setPage(this.hero.location);
         this.setPhase((this.phase + 1));
+    }
+
+    //Save Page Event Handler
+    saveGameState(){
+
+        this.savedHero = JSON.parse(JSON.stringify(this.heroSnapshot));
+        console.log(this.savedHero)
+    }
+
+    //Load Page Event Handler
+    loadGameState(){
+        if(this.savedHero.location != undefined){
+            this.disableOptions();
+            this.setHero(this.savedHero);            
+            this.setPage(this.savedHero.location);
+        }        
     }
 
     //Reset Game Event Handler
     resetGame(){
+        this.disableOptions();
         this.setHero();
         this.setPhase(0);
         this.setPage(null);
@@ -75,7 +95,7 @@ export class GameEngineComponent {
         var pageString = option.page.toString();
 
         //Enact the Effects on Option
-        if(option.effect != undefined){
+        if(option.effect != undefined && !this.hero.godMode){
             this.enactModifiers(option.effect);
         }        
 
@@ -88,9 +108,15 @@ export class GameEngineComponent {
 
     //SETTERS
     //Set Hero as Default Hero
-    setHero(){
-        //Need to break the bindings. This hack is the only thing that worked
-        this.hero  = JSON.parse(JSON.stringify(this.defaultHero));
+    setHero(passedHero?: Hero){
+        if(passedHero != undefined){
+            this.hero  = JSON.parse(JSON.stringify(passedHero));
+        }else{
+             //Need to break the bindings. This hack is the only thing that worked
+            this.hero  = JSON.parse(JSON.stringify(this.defaultHero));
+        }
+
+       
     }
 
     //Set Cheating
@@ -108,15 +134,12 @@ export class GameEngineComponent {
     //Add Inventory Object to Hero's Inventory
     addToInventory(inventoryItem){
         this.hero.inventory.push(inventoryItem);
-        console.log(this.defaultHero)
-        console.log(this.hero)
     }
 
     //Remove Hero's Inventory Object by Object's Name
     removeFromInventory(inventoryItemName: string){
         var itemIndex = this.hero.inventory.findIndex(inventoryItem => inventoryItem.name === inventoryItemName);
         this.hero.inventory.splice(itemIndex, 1);
-        console.log(this.defaultHero)
     }
 
     //Seperate Out Special Inventory Objects
@@ -144,14 +167,19 @@ export class GameEngineComponent {
     //Current Page and Associated Handlers
     setPage(pageNumber: string){
         if(pageNumber != null){
-            //Because JS will read my JSon as a number irredisregardless
-            var pageString = pageNumber.toString();
-             //TODO: Save Hero Here
 
+            var pageString = pageNumber.toString();
+
+            this.hero.location = pageString;
+           
             this.currentPage = this.book.bookPages[pageString];
+            
+
+            //TODO: Save Temp Hero Here?
+            this.heroSnapshot = JSON.parse(JSON.stringify(this.hero));
 
             //Modify Hero if page has ouchies
-            if(this.currentPage.effect != undefined){
+            if(this.currentPage.effect != undefined && !this.hero.godMode){
                 this.enactModifiers(this.currentPage.effect);
             }
 
