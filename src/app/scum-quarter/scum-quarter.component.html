@@ -1,33 +1,29 @@
-<main class="book scum-quarter">
-	<div class="section">
-		<h2 class="row row--padded heading h1">Down to the Scum Quarter</h2>
-		<div class="book__page row row--padded">
-			<scum-quarter-start
-				*ngIf="phase === 0"
-				(startAdventure)="startAdventure($event)">
-			</scum-quarter-start>
-			
-			<scum-quarter-inventory
-				*ngIf="phase === 1"
-				[hero]=hero
-				[book]=book
-				[currentPage]=currentPage
-				(chooseInventory)="chooseInventory($event)"
-				(startBook)="startBook($event)">
-			</scum-quarter-inventory>
+<main class="book">
+	<h2 class="row row--padded book__heading book__heading--main heading h1">Down to the Scum Quarter</h2>	
+	<scum-quarter-start
+		*ngIf="phase === 0"
+		(startAdventure)="startAdventure($event)">
+	</scum-quarter-start>
+	
+	<scum-quarter-inventory
+		*ngIf="phase === 1"
+		[hero]=hero
+		[book]=book
+		[currentPage]=currentPage
+		(chooseInventory)="chooseInventory($event)"
+		(startBook)="startBook($event)">
+	</scum-quarter-inventory>
 
-			<scum-quarter-page
-				*ngIf="phase === 2"
-				[hero]=hero
-				[book]=book
-				[currentPage]=currentPage
-				(chooseOption)="chooseOption($event)"
-				(rollDie)="rollDie()"
-				(resetGame)="resetGame()"
-				(setPage)="setPage($event)"
-				(saveGameState)="saveGameState($event)"
-				(loadGameState)="loadGameState($event)">
-			</scum-quarter-page>
-		</div>
-	</div>
+	<scum-quarter-page
+		*ngIf="phase === 2"
+		[hero]=hero
+		[book]=book
+		[currentPage]=currentPage
+		(chooseOption)="chooseOption($event)"
+		(rollDie)="rollDie()"
+		(resetGame)="resetGame()"
+		(setPage)="setPage($event)"
+		(saveGameState)="saveGameState($event)"
+		(loadGameState)="loadGameState($event)">
+	</scum-quarter-page>
 </main>

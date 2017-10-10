@@ -845,7 +845,7 @@ template {
   box-sizing: border-box; }
 
 body, html {
-  font: 14px/1.5 Roboto, Helvetica, sans-serif;
+  font: 14px/1.5 Helvetica, sans-serif;
   background-color: #ffffff; }
 
 p {
@@ -863,6 +863,9 @@ img {
   max-width: 100%;
   height: auto;
   display: block; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
 
 nav ul,
 nav dl,
@@ -900,10 +903,9 @@ article li {
   #TYPOGRAPHY
 \*------------------------------------*/
 .heading {
-  margin-top: .5em;
-  margin-bottom: .5em;
-  line-height: 1.1;
-  font-family: 'PT Serif', serif; }
+  padding-top: .5em;
+  padding-bottom: .5em;
+  line-height: 1.1; }
 
 .h1 {
   font-size: 2.25rem; }
@@ -932,20 +934,11 @@ article li {
 /*#region ----------------------------*\
   #BUTTONS / CTAs
 \*------------------------------------*/
-/*------ #CTA BUTTONS --------*/
+/*------ #Drfault BUTTONS --------*/
 .btn {
   cursor: pointer;
   outline: none;
-  padding: .75rem 1.5rem;
-  margin: 0 0 .25rem;
-  background-color: #1D355E;
-  border: 1px solid #8DA8CC;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-  text-transform: uppercase;
-  -webkit-transition: background 250ms ease-in-out, color 250ms ease-in-out, border-color 250ms ease-in-out;
-  transition: background 250ms ease-in-out, color 250ms ease-in-out, border-color 250ms ease-in-out; }
+  text-decoration: none; }
   .btn:disabled {
     opacity: .6; }
 
@@ -1042,20 +1035,6 @@ article li {
     display: none; }
 
   /*#endregion*/
-  /*#region #BUTTONS*/
-  .btn {
-    display: block;
-    margin-right: 0;
-    margin-bottom: .5rem;
-    text-align: center;
-    font-size: 1rem;
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem; }
-    .btn:hover {
-      background-color: #000000;
-      border-color: #000000; }
-
   /*#endregion*/
   /*#region #HEADER*/
   .header {
@@ -1064,67 +1043,6 @@ article li {
     padding-bottom: 1rem; }
 
   /*#endregion*/ }
-.book__page {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  border: 1px dotted #333;
-  margin-bottom: 2rem; }
-
-.inventory {
-  margin-bottom: 1.5rem; }
-  .inventory__item {
-    position: relative;
-    margin: 1% 2%; }
-    .inventory__item--book {
-      flex-basis: 33%;
-      margin: 0;
-      padding: .25rem; }
-    .inventory__item__checkbox {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      display: flex;
-      cursor: pointer; }
-      .inventory__item__checkbox:disabled + label {
-        opacity: .7;
-        cursor: not-allowed; }
-      .inventory__item__checkbox:checked + label img {
-        border-color: #1D355E; }
-    .inventory__item__label {
-      display: block; }
-      .inventory__item__label img {
-        border: 5px solid #8DA8CC; }
-    .inventory__item__description {
-      width: 100%;
-      max-width: 150px;
-      margin: 0;
-      padding: .5rem;
-      text-align: center; }
-
-.die {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 1%;
-  margin-bottom: 2rem;
-  border: 1px solid #8DA8CC;
-  background: #ffffff;
-  cursor: pointer; }
-
-.option {
-  display: block;
-  width: 100%;
-  text-align: left;
-  border: 2px solid #8DA8CC;
-  background: #ffffff;
-  padding: 1rem 2%;
-  margin-bottom: .5rem;
-  cursor: pointer; }
-  .option:disabled {
-    cursor: not-allowed; }
-
 /*#endregion*/
 
 /*# sourceMappingURL=styles.css.map */

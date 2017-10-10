@@ -4,14 +4,16 @@
 
 // Color naming convention: http://chir.ag/projects/name-that-color/
 
+$parchment: #F0e6cd;
+$muddyWaters: #bc8358;
+$twine: #c09a5c;
+$westCoast: #654b1a;
+$bronzeTone: #412c0d;
+$maroon: #840000;
+
 $white: #ffffff;
 
-$poloBlue: #8DA8CC;
-$mineShaft: #333;
-
 $black: #000000;
-
-$cello: #1D355E;
 
 
 // TRANSITION SPEED
@@ -45,7 +47,7 @@ $smallMobile: 480px;
 \*------------------------------------*/
 
 
-
+@import url('https://fonts.googleapis.com/css?family=Meddon|PT+Serif:400,700');
 
 
 /*#endregion*/
@@ -539,7 +541,5 @@ $smallMobile: 480px;
 /*#region ----------------------------*\
   #PARTIALS
 \*------------------------------------*/
-@import "_normalize.scss";
-@import "_grid.scss";
-@import "_global.scss";
+@import "_book.scss";
 /*#endregion*/

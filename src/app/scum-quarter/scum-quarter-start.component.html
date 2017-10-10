@@ -1,5 +1,6 @@
-		<h4 class="heading h3">How to Play</h4>
-		<ol>
+<div class="book__page row row--padded">
+		<h4 class="heading h3 book__heading">How to Play</h4>
+		<ol class="book__rules">
 			<li>
 				Decide whether you’re going to cheat or not. Most people cheat in solo adventures, even if they don’t admit it. If you’re not going to cheat, get a six-sided die.
 			</li>
@@ -29,11 +30,12 @@
 			</li>
 		</ol>
 
-		<h4 class="heading h3">The Simple Method</h4>
-		<ol>
+		<h4 class="heading h3 book__heading">The Simple Method</h4>
+		<ol class="book__rules">
 			<li>Get a 6-sided die, and ignore steps 2–5.</li>
 		</ol>
 
-		<button class="btn" (click)="emitStartAdventure(false)">I am the soul of Honor</button>
-		<button class="btn" (click)="emitStartAdventure(true)">I am totally going to cheat</button>
+		<button class="btn book__btn book__btn--inline" (click)="emitStartAdventure(false)">I am the soul of Honor</button>
+		<button class="btn book__btn book__btn--inline" (click)="emitStartAdventure(true)">I am totally going to cheat</button>
+</div>
 

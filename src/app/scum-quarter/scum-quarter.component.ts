@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 
 import {Book, BookPages, Page, Option, Effect } from '../classes/book';
@@ -18,7 +18,9 @@ import { ScumQuarterPageComponent } from './scum-quarter-page.component';
 @Component({
   selector: 'scum-quarter',
   templateUrl: './scum-quarter.component.html',
-  providers: [BookService]
+  styleUrls: ['../../assets/scum-quarter/css/styles.css'],
+  providers: [BookService],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class ScumQuarterComponent extends GameEngineComponent {

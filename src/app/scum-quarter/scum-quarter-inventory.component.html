@@ -1,17 +1,17 @@
+<div class="book__page row row--padded">
 
-<main class="page">
 	<h3 class="heading h2">The Prelude</h3>
-	<article class="page__section">
-		<p>Your beautiful mistress, the Lady Oiseaux, has been kidnapped. There is only one slim clue that may lead you to her&#8212;a brief message, scrawled in pale-gold eye paint across the side of her hijacked palanquin: Oh! This is awful! I am being kidnapped! They are taking me to sell to a desert chieftain at an auction, which I think is going to take place at midnight somewhere near the river, and I'll miss the party tonight. And I was going to wear my new dress with the ruby chips sewn on cloth of gold, and the peacock feather fan from . . .</p>
+	<p>Your beautiful mistress, the Lady Oiseaux, has been kidnapped. There is only one slim clue that may lead you to her&#8212;a brief message, scrawled in pale-gold eye paint across the side of her hijacked palanquin: Oh! This is awful! I am being kidnapped! They are taking me to sell to a desert chieftain at an auction, which I think is going to take place at midnight somewhere near the river, and I'll miss the party tonight. And I was going to wear my new dress with the ruby chips sewn on cloth of gold, and the peacock feather fan from . . .</p>
 
-		<p>Those few words, and the "For Sale" brochure you hold in your kid-gloved hand, lead you to suspect that Lady Oiseaux is being held at the infamous Quay of Scented Rats&#8212;a floating bordello now stuck in the mudflats of the River Sleine. Pausing only to slip your trusty rapier into its scabbard, you draw your cloak around you and erupt out into the shadows of the night&#8212;toward the Sleine&#8212;and the vicious, nasty, disgusting . . . (roll of drums) . . . Scum Quarter of the Old City! 
+	<p>Those few words, and the "For Sale" brochure you hold in your kid-gloved hand, lead you to suspect that Lady Oiseaux is being held at the infamous Quay of Scented Rats&#8212;a floating bordello now stuck in the mudflats of the River Sleine. Pausing only to slip your trusty rapier into its scabbard, you draw your cloak around you and erupt out into the shadows of the night&#8212;toward the Sleine&#8212;and the vicious, nasty, disgusting . . . (roll of drums) . . . Scum Quarter of the Old City! 
 		</p>
 
-		<p>
+	<p>
 		You walk a few yards with considerable bravado and then whip back to your townhouse. Only a complete fool would go down to the vicious, nasty, disgusting Scum Quarter without pistols and a dagger or two. Maybe you should call in on the lads at the Fencing Academy . . . but there's no time. Select five items from the following list before once again slinking out into the shadows of the night.. . .
-		</p>
-		<button class="btn" *ngIf="hero.godMode === true" (click)="emitStartBook()">Let's go!</button>
-	</article>
+	</p>
+
+	<button class="btn book__btn" *ngIf="hero.godMode === true" (click)="emitStartBook()">Let's go!</button>
+
 	<form *ngIf="hero.godMode === false" (ngSubmit)="emitStartBook()">
 		<div class="inventory row row--flex">
 			<div class="inventory__item" *ngFor="let inventoryItem of book.inventoryPage.inventoryChoices">
@@ -24,11 +24,11 @@
 					[disabled]="hero.inventory.length > 4 && !inventoryItem.chosen" />
 					
 				<label for="{{inventoryItem.name}}" class="inventory__item__label">
-					<img src="{{inventoryItem.imgUrl}}" alt="{{inventoryItem.display}}" width="150" height="150" />
+					<img class="inventory__item__image" src="{{inventoryItem.imgUrl}}" alt="{{inventoryItem.display}}" width="150" height="150" />
 					<p class="inventory__item__description">{{inventoryItem.display}}</p>
 				</label>
 			</div>
 		</div>
-		<button class="btn" type="sumbit" [disabled]="hero.inventory.length < 5">Let's Go!</button>
+		<button class="btn book__btn" type="sumbit" [disabled]="hero.inventory.length < 5">Let's Go!</button>
 	</form>
-</main>
+</div>
