@@ -5,7 +5,7 @@
 	<img *ngIf="currentPage.imageUrl != undefined" src="{{currentPage.imageUrl}}" alt="{{currentPage.imageAltText}}" width="600" />
 	<p [innerHTML]="currentPage.copy"></p>
 
-	<div *ngIf="currentPage.die && !hero.godMode">
+	<div class="book__die" *ngIf="currentPage.die && !hero.godMode">
 		<button class="die" (click)="emitRollDie()">
 			{{currentPage.dieRoll | die}}
 		</button>
@@ -26,16 +26,10 @@
 		<button class="options__btn" (click)="emitResetGame()">Restart Game</button>
 	</div>
 
-	<button class="btn book__bookmark book__bookmark--save" (click)="emitSaveGameState()">Bookmark This Page</button>
-	<button class="btn book__bookmark book__bookmark--load" (click)="emitLoadGameState()">Go to Bookmarked Page</button>
+	<button class="btn book__bookmark book__bookmark--save" (click)="emitSaveGameState()">Save Page</button>
+	<button class="btn book__bookmark book__bookmark--load" (click)="emitLoadGameState()">Load Page</button>
 
 </article>
-
-<aside class="book__controls">
-	
-
-
-</aside>
 
 <footer class="book__footer row row--flex" *ngIf="!hero.godMode">
 	<div *ngIf="hero.gold > 0" class="book__footer__gold">
@@ -48,21 +42,14 @@
 	<div *ngIf="hero.dieModifier != 0" class="book__footer__die">
 		<p>{{hero.dieModifier}}</p>
 	</div>
-	
 </footer>
 
-
-
-<footer class="book__footer row" *ngIf="hero.godMode">
-	<h5 class="heading h3">Cheating Controls </h5>
-	<button (click)="emitSetPage(currentPage.number - 1)" [disabled]="currentPage.number < 2">Previous Page</button>
-	<button (click)="emitSetPage(currentPage.number + 1)" [disabled]="currentPage.number > 99">Next Page</button>
-	{{currentPage.number}}
+<footer class="book__footer row row--flex controls" *ngIf="hero.godMode">
+	<button class="btn controls__btn" (click)="emitSetPage(currentPage.number - 1)" [disabled]="currentPage.number < 2">Previous Page</button>
 	<form (ngSubmit)="emitSetPage(inputPageNumber.value)">
-		<input ngModel name="inputPageNumber" #inputPageNumber required type="number" min="1" max="100"/>
-		<button type="submit" [disabled]="!inputPageNumber.validity.valid">Go</button>
+		<input class="controls__input" ngModel name="inputPageNumber" #inputPageNumber required type="number" min="1" max="100"/>
+		<button type=" controls__submit submit" [disabled]="!inputPageNumber.validity.valid">Go</button>
 	</form>
-	<button class="btn" (click)="emitSaveGameState()">Bookmark This Page</button>
-	<button class="btn" (click)="emitLoadGameState()">Go to Bookmarked Page</button>
-	<button class="btn" (click)="emitResetGame()">Restart Game</button>
+	<button class="controls__btn btn" (click)="emitSetPage(currentPage.number + 1)" [disabled]="currentPage.number > 99">Next Page</button>
+	<button class="controls__btn btn" (click)="emitResetGame()">Restart Game</button>
 </footer>

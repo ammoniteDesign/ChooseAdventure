@@ -124,10 +124,27 @@
         margin-right: 0; }
   .book__bookmark {
     position: absolute;
-    width: 5rem;
-    height: 5rem;
-    top: 0;
-    right: 0; }
+    width: 4rem;
+    height: 4rem;
+    top: -.25rem;
+    background-color: #840000;
+    border: none;
+    color: #F0e6cd;
+    font-size: .8rem; }
+    .book__bookmark:after {
+      border-left: 2rem solid #840000;
+      border-right: 2rem solid #840000;
+      border-bottom: 1rem solid transparent;
+      bottom: -1rem;
+      content: '';
+      height: 0;
+      left: 0;
+      position: absolute;
+      width: 0; }
+    .book__bookmark--load {
+      right: .5rem; }
+    .book__bookmark--save {
+      right: 5rem; }
   .book__footer {
     position: relative;
     top: -3rem;
@@ -198,7 +215,8 @@
     cursor: pointer;
     position: relative;
     background: #F0e6cd;
-    z-index: 1; }
+    z-index: 1;
+    font-family: 'PT Serif', serif; }
   .options__btn-wrap {
     position: relative;
     margin-bottom: .5rem; }
@@ -213,6 +231,10 @@
       border-radius: 50%; }
     .options__btn-wrap:disabled {
       cursor: not-allowed; }
+
+.controls__btn {
+  border: none;
+  background: none; }
 
 /*#endregion*/
 

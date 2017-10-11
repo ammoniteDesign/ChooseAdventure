@@ -39,7 +39,7 @@ export class ScumQuarterComponent extends GameEngineComponent {
         this.defaultHero.godMode = false;
         this.defaultHero.gold = 0;
         this.defaultHero.inventory = [];
-        this.defaultHero.location = "7";
+        this.defaultHero.location = "1";
         
 
         //SetUp Hero
@@ -49,8 +49,6 @@ export class ScumQuarterComponent extends GameEngineComponent {
         bookService.getBook('assets/scum-quarter/ScumQuarter.json')
         	.then(response => {
         		this.book = response.json() as Book;
-                //TODO: Remove -- Using to Debug
-                //this.setPage("1");
         	});
     	}
  	

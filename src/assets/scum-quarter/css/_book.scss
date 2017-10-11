@@ -110,11 +110,35 @@ $smallMobile: 480px;
 
 	&__bookmark {
 		position: absolute;
-		width: 5rem;
-		height: 5rem;
-		top: 0;
-		right: 0;
+		width: 4rem;
+		height: 4rem;
+		top: -.25rem;
+		background-color: $maroon;
+		border: none;
+		color: $parchment;
+		font-size: .8rem;
+
+		&:after {
+		    border-left: 2rem solid $maroon;
+		    border-right: 2rem solid $maroon;
+		    border-bottom: 1rem solid transparent;
+		    bottom: -1rem;
+		    content:'';
+		    height: 0;
+		    left:0;
+		    position:absolute;
+		    width: 0;
+ 		}
+
+ 		&--load {
+ 			right: .5rem;
+ 		}
+
+ 		&--save{
+ 			right: 5rem;
+ 		}
 	}
+
 
 	&__footer {
 		position: relative;
@@ -218,6 +242,7 @@ $smallMobile: 480px;
 	    position: relative;
 	    background: $parchment;
 	    z-index: 1;
+	    font-family: 'PT Serif', serif;
 	    //box-shadow:0 1px 4px transparentize($westCoast, .8);
 
 	}
@@ -242,5 +267,12 @@ $smallMobile: 480px;
 	    &:disabled {
 	    	cursor: not-allowed;
 	    }
+	}
+}
+
+.controls {
+	&__btn {
+		border: none;
+		background: none;
 	}
 }
